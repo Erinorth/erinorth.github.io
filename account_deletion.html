@@ -1,28 +1,347 @@
-# MealRecovery - Account Deletion Request
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>ลบบัญชี MealRecovery | Account Deletion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .app-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        .steps {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .warning-box strong {
+            color: #856404;
+            font-size: 1.1em;
+        }
+        .data-list {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .email-link {
+            display: inline-block;
+            background: #667eea;
+            color: white !important;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 10px 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .email-link:hover {
+            background: #764ba2;
+            text-decoration: none;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .divider {
+            margin: 50px 0;
+            border: none;
+            border-top: 2px dashed #ddd;
+        }
+        .language-toggle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .lang-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border: 2px solid #667eea;
+            border-radius: 20px;
+            color: #667eea;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        .lang-section {
+            display: none;
+        }
+        .lang-section.active {
+            display: block;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            .app-name {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="app-name">🍽️ MealRecovery</div>
+        </div>
 
-## How to Delete Your Account
+        <div class="language-toggle">
+            <span class="lang-btn active" onclick="switchLang('th')">ภาษาไทย</span>
+            <span class="lang-btn" onclick="switchLang('en')">English</span>
+        </div>
 
-To delete your MealRecovery account and all associated data, please follow these steps:
+        <!-- Thai Version -->
+        <div id="thai-section" class="lang-section active">
+            <h1>คำขอลบบัญชี</h1>
 
-1. Open the MealRecovery app
-2. Go to Settings > Account
-3. Tap "Delete Account"
-4. Confirm deletion
+            <p>หากคุณต้องการลบบัญชี MealRecovery และข้อมูลทั้งหมดที่เกี่ยวข้อง กรุณาทำตามขั้นตอนด้านล่างนี้</p>
 
-**OR** Email us at: support@yourdomain.com with subject "Delete MealRecovery Account"
+            <h2>วิธีการลบบัญชี</h2>
+            
+            <div class="steps">
+                <p><strong>วิธีที่ 1: ลบผ่านแอป</strong></p>
+                <ol>
+                    <li>เปิดแอป MealRecovery</li>
+                    <li>ไปที่ <strong>Settings</strong> (การตั้งค่า) → <strong>Account</strong> (บัญชี)</li>
+                    <li>แตะที่ <strong>"Delete Account"</strong> (ลบบัญชี)</li>
+                    <li>ยืนยันการลบบัญชี</li>
+                </ol>
+            </div>
 
-## What Data Will Be Deleted
+            <div class="steps">
+                <p><strong>วิธีที่ 2: ส่งอีเมลขอลบบัญชี</strong></p>
+                <p>ส่งอีเมลมาที่เราพร้อมหัวข้อ <span class="highlight">"Delete MealRecovery Account"</span></p>
+                <p style="text-align: center; margin-top: 15px;">
+                    <a href="mailto:support@yourdomain.com?subject=Delete MealRecovery Account" class="email-link">📧 ส่งอีเมลขอลบบัญชี</a>
+                </p>
+            </div>
 
-When you delete your account, the following data will be permanently removed:
-- Email address
-- Workout logs and meal timing records
-- Streak data
-- User preferences
-- Subscription information
+            <h2>ข้อมูลที่จะถูกลบ</h2>
+            
+            <div class="data-list">
+                <p>เมื่อคุณลบบัญชี ข้อมูลต่อไปนี้จะถูกลบออกอย่างถาวร:</p>
+                <ul>
+                    <li>📧 ที่อยู่อีเมล</li>
+                    <li>💪 บันทึกการออกกำลังกายและเวลาทานอาหาร</li>
+                    <li>🔥 ข้อมูล Streak (ความต่อเนื่อง)</li>
+                    <li>⚙️ การตั้งค่าและความชอบส่วนบุคคล</li>
+                    <li>💳 ข้อมูลการสมัครสมาชิก</li>
+                </ul>
+            </div>
 
-## Data Retention
+            <div class="warning-box">
+                <p><strong>⚠️ คำเตือน:</strong> การลบบัญชีจะลบข้อมูลทั้งหมดอย่างถาวร และไม่สามารถกู้คืนได้</p>
+            </div>
 
-- Data will be deleted within 30 days of your request
-- Some data may be retained for legal compliance (e.g., payment records for tax purposes)
+            <h2>ระยะเวลาการเก็บข้อมูล</h2>
+            <ul>
+                <li>ข้อมูลจะถูกลบภายใน <strong>30 วัน</strong> นับจากวันที่ได้รับคำขอ</li>
+                <li>ข้อมูลบางส่วนอาจถูกเก็บไว้เพื่อปฏิบัติตามกฎหมาย (เช่น บันทึกการชำระเงินเพื่อวัตถุประสงค์ด้านภาษี)</li>
+                <li>ข้อมูลที่จำเป็นต่อการปฏิบัติตามข้อกำหนดทางกฎหมายจะถูกเก็บไว้ตามระยะเวลาที่กฎหมายกำหนด</li>
+            </ul>
 
-For questions, contact: support@yourdomain.com
+            <h2>หลังจากลบบัญชี</h2>
+            <ul>
+                <li>คุณจะไม่สามารถเข้าสู่ระบบแอป MealRecovery ได้อีกต่อไป</li>
+                <li>การสมัครสมาชิกทั้งหมดจะถูกยกเลิก</li>
+                <li>คุณจะไม่ได้รับอีเมลจากเราอีกต่อไป</li>
+                <li>หากต้องการใช้งานอีกครั้ง คุณต้องสร้างบัญชีใหม่</li>
+            </ul>
+
+            <div class="contact-box">
+                <h2 style="margin-top: 0; border: none; padding: 0;">💬 ติดต่อเรา</h2>
+                <p>หากมีคำถามเกี่ยวกับการลบบัญชีหรือข้อมูลส่วนบุคคล</p>
+                <p>
+                    <a href="mailto:support@yourdomain.com" class="email-link">support@yourdomain.com</a>
+                </p>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #666;">เวลาตอบกลับ: ภายใน 3-5 วันทำการ</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- English Version -->
+        <div id="english-section" class="lang-section">
+            <h1>Account Deletion Request</h1>
+
+            <p>If you wish to delete your MealRecovery account and all associated data, please follow the steps below.</p>
+
+            <h2>How to Delete Your Account</h2>
+            
+            <div class="steps">
+                <p><strong>Method 1: Delete via App</strong></p>
+                <ol>
+                    <li>Open the MealRecovery app</li>
+                    <li>Go to <strong>Settings</strong> → <strong>Account</strong></li>
+                    <li>Tap <strong>"Delete Account"</strong></li>
+                    <li>Confirm deletion</li>
+                </ol>
+            </div>
+
+            <div class="steps">
+                <p><strong>Method 2: Email Deletion Request</strong></p>
+                <p>Send us an email with the subject <span class="highlight">"Delete MealRecovery Account"</span></p>
+                <p style="text-align: center; margin-top: 15px;">
+                    <a href="mailto:support@yourdomain.com?subject=Delete MealRecovery Account" class="email-link">📧 Email Deletion Request</a>
+                </p>
+            </div>
+
+            <h2>What Data Will Be Deleted</h2>
+            
+            <div class="data-list">
+                <p>When you delete your account, the following data will be permanently removed:</p>
+                <ul>
+                    <li>📧 Email address</li>
+                    <li>💪 Workout logs and meal timing records</li>
+                    <li>🔥 Streak data</li>
+                    <li>⚙️ User preferences and settings</li>
+                    <li>💳 Subscription information</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <p><strong>⚠️ Warning:</strong> Account deletion is permanent and cannot be undone. All your data will be lost.</p>
+            </div>
+
+            <h2>Data Retention</h2>
+            <ul>
+                <li>Data will be deleted within <strong>30 days</strong> of your request</li>
+                <li>Some data may be retained for legal compliance (e.g., payment records for tax purposes)</li>
+                <li>Information required for legal obligations will be kept for the period specified by law</li>
+            </ul>
+
+            <h2>After Account Deletion</h2>
+            <ul>
+                <li>You will no longer be able to access the MealRecovery app</li>
+                <li>All subscriptions will be cancelled</li>
+                <li>You will not receive any further emails from us</li>
+                <li>To use the service again, you will need to create a new account</li>
+            </ul>
+
+            <div class="contact-box">
+                <h2 style="margin-top: 0; border: none; padding: 0;">💬 Contact Us</h2>
+                <p>For questions about account deletion or personal data</p>
+                <p>
+                    <a href="mailto:support@yourdomain.com" class="email-link">support@yourdomain.com</a>
+                </p>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Response time: Within 3-5 business days</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Hide all sections
+            document.querySelectorAll('.lang-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected language
+            if (lang === 'th') {
+                document.getElementById('thai-section').classList.add('active');
+                document.querySelectorAll('.lang-btn')[0].classList.add('active');
+            } else {
+                document.getElementById('english-section').classList.add('active');
+                document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
