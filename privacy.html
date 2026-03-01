@@ -1,241 +1,392 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>นโยบายความเป็นส่วนตัว | Privacy Policy</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Sarabun', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #f5f5f5;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 2.2em;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 1.6em;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-        }
-        h3 {
-            color: #34495e;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            font-size: 1.3em;
-        }
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 15px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .update-date {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .websites-list {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .contact-info {
-            background: #e8f4f8;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .highlight {
-            background-color: #fff9c4;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        strong {
-            color: #2c3e50;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>นโยบายความเป็นส่วนตัว | Privacy Policy</title>
+  <style>
+    body{
+      font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      margin:24px;
+      line-height:1.6;
+      color:#111;
+      background:#f8f9fa;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:40px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .note{
+      color:#666;
+      font-size:0.9em;
+      margin-top:8px;
+      padding:12px;
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+    }
+    .muted{color:#4c4c4c}
+    h1{
+      color:#1a73e8;
+      border-bottom:2px solid #1a73e8;
+      padding-bottom:12px;
+    }
+    h2{
+      color:#333;
+      margin-top:32px;
+      border-left:4px solid #1a73e8;
+      padding-left:12px;
+    }
+    h3{
+      color:#333;
+      margin-top:24px;
+      margin-bottom:8px;
+    }
+    p{margin-bottom:12px}
+    ol,ul{margin-left:20px}
+    li{margin-bottom:8px}
+    strong{color:#1a73e8}
+    a{color:#1a73e8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #ddd;
+    }
+    .lang-toggle{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .lang-btn{
+      display:inline-block;
+      padding:8px 20px;
+      margin:0 4px;
+      border:2px solid #1a73e8;
+      border-radius:20px;
+      color:#1a73e8;
+      cursor:pointer;
+      transition:all 0.3s;
+      font-weight:600;
+      background:white;
+    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
+    .lang-section{display:none}
+    .lang-section.active{display:block}
+    .highlight{
+      background:#fff3cd;
+      padding:2px 6px;
+      border-radius:3px;
+      font-weight:600;
+    }
+    .info-box{
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+      padding:16px 20px;
+      margin:20px 0;
+    }
+    .contact-box{
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+      padding:20px;
+      margin-top:32px;
+    }
+    @media (max-width:768px){
+      body{margin:12px}
+      .container{padding:24px 16px}
+      h1{font-size:1.6em}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>นโยบายความเป็นส่วนตัว</h1>
-        <p class="update-date">วันที่อัพเดทล่าสุด: 1 กุมภาพันธ์ 2026</p>
+  <div class="container">
 
-        <div class="websites-list">
-            <h3>นโยบายนี้ใช้กับเว็บไซต์ต่อไปนี้:</h3>
-            <ul>
-                <li><a href="https://gamegearth.com">gamegearth.com</a></li>
-                <li><span class="highlight">[เพิ่มชื่อเว็บไซต์อื่นๆ ของคุณที่นี่]</span></li>
-            </ul>
-        </div>
-
-        <p>เราให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้บริการ นโยบายนี้อธิบายว่าเราเก็บรวบรวม ใช้งาน และปกป้องข้อมูลส่วนบุคคลของคุณอย่างไร ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</p>
-
-        <h2>1. ข้อมูลที่เราเก็บรวบรวม</h2>
-        
-        <h3>1.1 ข้อมูลที่คุณให้โดยตรง</h3>
-        <ul>
-            <li>ชื่อและอีเมล (เมื่อสมัครรับจดหมายข่าว)</li>
-            <li>ความคิดเห็นและข้อเสนอแนะ</li>
-        </ul>
-
-        <h3>1.2 ข้อมูลที่เก็บโดยอัตโนมัติ</h3>
-        <ul>
-            <li><strong>ข้อมูลการใช้งาน:</strong> หน้าที่เข้าชม เวลาที่ใช้ ลิงก์ที่คลิก</li>
-            <li><strong>ข้อมูลอุปกรณ์:</strong> ประเภทเบราว์เซอร์ ระบบปฏิบัติการ IP address</li>
-            <li><strong>Cookies และเทคโนโลยีติดตาม:</strong> ใช้เพื่อวิเคราะห์พฤติกรรมและปรับปรุงประสบการณ์</li>
-        </ul>
-
-        <h2>2. วัตถุประสงค์ในการใช้ข้อมูล</h2>
-        <p>เราใช้ข้อมูลของคุณเพื่อ:</p>
-        <ul>
-            <li>ปรับปรุงเนื้อหาและประสบการณ์การใช้งานเว็บไซต์</li>
-            <li>วิเคราะห์พฤติกรรมผู้ใช้งานผ่าน Google Analytics และเครื่องมือวิเคราะห์อื่นๆ</li>
-            <li>แสดงโฆษณาและเนื้อหาที่เกี่ยวข้องผ่าน Meta Pixel และ Google Ads</li>
-            <li>ติดตามผลการคลิก affiliate links เพื่อรับค่าคอมมิชชั่น</li>
-            <li>ส่งจดหมายข่าวและข้อมูลที่คุณสนใจ (หากคุณยินยอม)</li>
-        </ul>
-
-        <h2>3. Cookies และเทคโนโลยีติดตาม</h2>
-        <p>เว็บไซต์ของเราใช้ cookies และเทคโนโลยีที่คล้ายกันเพื่อปรับปรุงประสบการณ์ของคุณ[web:32]</p>
-
-        <h3>3.1 ประเภทของ Cookies</h3>
-        <ul>
-            <li><strong>Cookies จำเป็น:</strong> ช่วยให้เว็บไซต์ทำงานได้ปกติ</li>
-            <li><strong>Cookies วิเคราะห์:</strong> Google Analytics, Google Tag Manager - ใช้วิเคราะห์การใช้งาน</li>
-            <li><strong>Cookies โฆษณา:</strong> Meta Pixel, Google Ads - แสดงโฆษณาที่เกี่ยวข้อง</li>
-            <li><strong>Cookies Affiliate:</strong> ติดตามคลิกไปยังผลิตภัณฑ์เพื่อรับค่าคอมมิชชั่น[web:32]</li>
-        </ul>
-
-        <h3>3.2 การจัดการ Cookies</h3>
-        <p>คุณสามารถตั้งค่าเบราว์เซอร์เพื่อปฏิเสธ cookies ได้ แต่อาจส่งผลต่อการใช้งานบางฟีเจอร์ของเว็บไซต์</p>
-
-        <h2>4. การแบ่งปันข้อมูลกับบุคคลที่สาม</h2>
-        <p>เราอาจแบ่งปันข้อมูลของคุณกับ:</p>
-        <ul>
-            <li><strong>บริการวิเคราะห์:</strong> Google Analytics, Google Tag Manager</li>
-            <li><strong>แพลตฟอร์มโฆษณา:</strong> Google Ads, Meta (Facebook/Instagram)</li>
-            <li><strong>โปรแกรม Affiliate:</strong> Amazon Associates, Lazada Affiliate, Shopee Affiliate, และพันธมิตรอื่นๆ</li>
-            <li><strong>บริการโฮสติ้ง:</strong> GitHub Pages (อาจเก็บข้อมูล IP address และข้อมูลเทคนิค)[web:24]</li>
-        </ul>
-        <p>บุคคลที่สามเหล่านี้มีนโยบายความเป็นส่วนตัวของตนเอง และเราไม่สามารถควบคุมการใช้ข้อมูลของพวกเขาได้</p>
-
-        <h2>5. Affiliate Links และการเปิดเผยข้อมูล</h2>
-        <p>เว็บไซต์ของเราเป็นส่วนหนึ่งของโปรแกรม affiliate marketing หลายโปรแกรม ซึ่งหมายความว่า</p>
-        <ul>
-            <li>เราอาจได้รับค่าคอมมิชชั่นเมื่อคุณคลิกลิงก์และซื้อสินค้า</li>
-            <li>Cookies จะถูกวางบนอุปกรณ์ของคุณเพื่อติดตามการซื้อ</li>
-            <li>ราคาสินค้าของคุณจะไม่เปลี่ยนแปลงจากการใช้ affiliate links</li>
-            <li>ข้อมูลการคลิกและซื้อจะถูกส่งไปยังผู้ขายและเครือข่าย affiliate</li>
-        </ul>
-
-        <h2>6. ระยะเวลาการเก็บข้อมูล</h2>
-        <p>เราจะเก็บข้อมูลส่วนบุคคลของคุณไว้ตามระยะเวลาที่จำเป็น</p>
-        <ul>
-            <li>ข้อมูล Analytics: 26 เดือน (ตามค่าเริ่มต้นของ Google Analytics)</li>
-            <li>ข้อมูลผู้สมัครจดหมายข่าว: จนกว่าคุณจะยกเลิกการสมัคร</li>
-            <li>Cookies: ตามระยะเวลาที่กำหนดในแต่ละประเภท (1 วัน - 2 ปี)</li>
-        </ul>
-
-        <h2>7. สิทธิของคุณตาม PDPA</h2>
-        <p>ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล คุณมีสิทธิ์</p>
-        <ul>
-            <li><strong>สิทธิเข้าถึงข้อมูล:</strong> ขอดูข้อมูลส่วนบุคคลที่เราเก็บไว้</li>
-            <li><strong>สิทธิแก้ไข:</strong> ขอแก้ไขข้อมูลที่ไม่ถูกต้อง</li>
-            <li><strong>สิทธิลบข้อมูล:</strong> ขอให้ลบข้อมูลของคุณ</li>
-            <li><strong>สิทธิคัดค้าน:</strong> คัดค้านการประมวลผลข้อมูล</li>
-            <li><strong>สิทธิถอนความยินยอม:</strong> ถอนความยินยอมที่ให้ไว้ได้ทุกเมื่อ</li>
-            <li><strong>สิทธิขอรับข้อมูล:</strong> ขอรับสำเนาข้อมูลในรูปแบบที่อ่านได้</li>
-        </ul>
-
-        <h2>8. ความปลอดภัยของข้อมูล</h2>
-        <p>เราใช้มาตรการรักษาความปลอดภัยที่เหมาะสมเพื่อป้องกันการเข้าถึง เปลี่ยนแปลง หรือเปิดเผยข้อมูลโดยไม่ได้รับอนุญาต</p>
-        <ul>
-            <li>เว็บไซต์ใช้ HTTPS encryption</li>
-            <li>จำกัดการเข้าถึงข้อมูลเฉพาะผู้ที่จำเป็น</li>
-            <li>ทบทวนนโยบายความปลอดภัยอย่างสม่ำเสมอ</li>
-        </ul>
-
-        <h2>9. ลิงก์ไปยังเว็บไซต์อื่น</h2>
-        <p>เว็บไซต์ของเราอาจมีลิงก์ไปยังเว็บไซต์ภายนอก เราไม่รับผิดชอบต่อนโยบายความเป็นส่วนตัวหรือเนื้อหาของเว็บไซต์เหล่านั้น เราแนะนำให้คุณอ่านนโยบายความเป็นส่วนตัวของทุกเว็บไซต์ที่คุณเข้าเยี่ยมชม</p>
-
-        <h2>10. เด็กและเยาวชน</h2>
-        <p>เว็บไซต์ของเราไม่ได้มุ่งเป้าไปยังเด็กอายุต่ำกว่า 13 ปี เราไม่เก็บรวบรวมข้อมูลจากเด็กโดยเจตนา หากคุณเชื่อว่าเราได้เก็บข้อมูลจากเด็ก กรุณาติดต่อเรา</p>
-
-        <h2>11. การเปลี่ยนแปลงนโยบาย</h2>
-        <p>เราอาจอัพเดทนโยบายนี้เป็นครั้งคราว การเปลี่ยนแปลงจะมีผลทันทีเมื่อเผยแพร่บนหน้านี้ เราแนะนำให้ตรวจสอบหน้านี้เป็นระยะเพื่อดูการเปลี่ยนแปลง</p>
-
-        <h2>12. การถ่ายโอนข้อมูลข้ามประเทศ</h2>
-        <p>ข้อมูลของคุณอาจถูกประมวลผลและจัดเก็บบนเซิร์ฟเวอร์ที่ตั้งอยู่นอกประเทศไทย รวมถึงสหรัฐอเมริกาและสหภาพยุโรป เราจะดำเนินการตามขั้นตอนที่เหมาะสมเพื่อให้แน่ใจว่าข้อมูลของคุณได้รับการปกป้องอย่างเพียงพอ</p>
-
-        <div class="contact-info">
-            <h2>13. ติดต่อเรา</h2>
-            <p>หากคุณมีคำถามเกี่ยวกับนโยบายนี้ หรือต้องการใช้สิทธิของคุณ กรุณาติดต่อ</p>
-            <ul>
-                <li><strong>อีเมล:</strong> <span class="highlight">[ใส่อีเมลของคุณ]</span></li>
-                <li><strong>เว็บไซต์:</strong> <span class="highlight">[ใส่ URL ของเว็บไซต์หลัก]</span></li>
-            </ul>
-        </div>
-
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ecf0f1;">
-        
-        <h2>Privacy Policy (English Version)</h2>
-        <p><em>Last Updated: February 1, 2026</em></p>
-
-        <p>This Privacy Policy applies to all websites listed above. We respect your privacy and are committed to protecting your personal data in accordance with Thailand's Personal Data Protection Act (PDPA).</p>
-
-        <h3>Information We Collect</h3>
-        <p>We collect information you provide directly (name, email) and automatically (browsing behavior, device information, cookies).</p>
-
-        <h3>How We Use Your Information</h3>
-        <p>We use your data to improve our services, analyze user behavior via Google Analytics, display relevant ads via Meta Pixel and Google Ads, and track affiliate conversions.</p>
-
-        <h3>Cookies and Tracking</h3>
-        <p>We use essential, analytics, advertising, and affiliate cookies. You can manage cookie preferences through your browser settings.</p>
-
-        <h3>Affiliate Disclosure</h3>
-        <p>Our websites participate in affiliate programs. We may earn commissions when you click links and make purchases. Cookies track these transactions.</p>
-
-        <h3>Your Rights</h3>
-        <p>Under Thailand's PDPA, you have rights to access, rectify, erase, object to processing, and withdraw consent.</p>
-
-        <h3>Contact Us</h3>
-        <p>For questions or to exercise your rights, contact us at <span class="highlight">[your email]</span></p>
+    <div class="lang-toggle">
+      <button class="lang-btn" onclick="switchLang('en')">English</button>
+      <button class="lang-btn active" onclick="switchLang('th')">ภาษาไทย</button>
     </div>
+
+    <!-- Thai Version -->
+    <div id="th-section" class="lang-section active">
+      <header>
+        <h1>นโยบายความเป็นส่วนตัว</h1>
+        <p class="muted">วันที่อัพเดทล่าสุด: 1 กุมภาพันธ์ 2026</p>
+      </header>
+
+      <div class="info-box">
+        <h3>นโยบายนี้ใช้กับเว็บไซต์ต่อไปนี้:</h3>
+        <ul>
+          <li><a href="https://gamegearth.com">gamegearth.com</a></li>
+          <li><span class="highlight">[เพิ่มชื่อเว็บไซต์อื่นๆ ของคุณที่นี่]</span></li>
+        </ul>
+      </div>
+
+      <p>เราให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้บริการ นโยบายนี้อธิบายว่าเราเก็บรวบรวม ใช้งาน และปกป้องข้อมูลส่วนบุคคลของคุณอย่างไร ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</p>
+
+      <h2>1. ข้อมูลที่เราเก็บรวบรวม</h2>
+
+      <h3>1.1 ข้อมูลที่คุณให้โดยตรง</h3>
+      <ul>
+        <li>ชื่อและอีเมล (เมื่อสมัครรับจดหมายข่าว)</li>
+        <li>ความคิดเห็นและข้อเสนอแนะ</li>
+      </ul>
+
+      <h3>1.2 ข้อมูลที่เก็บโดยอัตโนมัติ</h3>
+      <ul>
+        <li><strong>ข้อมูลการใช้งาน:</strong> หน้าที่เข้าชม เวลาที่ใช้ ลิงก์ที่คลิก</li>
+        <li><strong>ข้อมูลอุปกรณ์:</strong> ประเภทเบราว์เซอร์ ระบบปฏิบัติการ IP address</li>
+        <li><strong>Cookies และเทคโนโลยีติดตาม:</strong> ใช้เพื่อวิเคราะห์พฤติกรรมและปรับปรุงประสบการณ์</li>
+      </ul>
+
+      <h2>2. วัตถุประสงค์ในการใช้ข้อมูล</h2>
+      <p>เราใช้ข้อมูลของคุณเพื่อ:</p>
+      <ul>
+        <li>ปรับปรุงเนื้อหาและประสบการณ์การใช้งานเว็บไซต์</li>
+        <li>วิเคราะห์พฤติกรรมผู้ใช้งานผ่าน Google Analytics และเครื่องมือวิเคราะห์อื่นๆ</li>
+        <li>แสดงโฆษณาและเนื้อหาที่เกี่ยวข้องผ่าน Meta Pixel และ Google Ads</li>
+        <li>ติดตามผลการคลิก affiliate links เพื่อรับค่าคอมมิชชั่น</li>
+        <li>ส่งจดหมายข่าวและข้อมูลที่คุณสนใจ (หากคุณยินยอม)</li>
+      </ul>
+
+      <h2>3. Cookies และเทคโนโลยีติดตาม</h2>
+      <p>เว็บไซต์ของเราใช้ cookies และเทคโนโลยีที่คล้ายกันเพื่อปรับปรุงประสบการณ์ของคุณ</p>
+
+      <h3>3.1 ประเภทของ Cookies</h3>
+      <ul>
+        <li><strong>Cookies จำเป็น:</strong> ช่วยให้เว็บไซต์ทำงานได้ปกติ</li>
+        <li><strong>Cookies วิเคราะห์:</strong> Google Analytics, Google Tag Manager - ใช้วิเคราะห์การใช้งาน</li>
+        <li><strong>Cookies โฆษณา:</strong> Meta Pixel, Google Ads - แสดงโฆษณาที่เกี่ยวข้อง</li>
+        <li><strong>Cookies Affiliate:</strong> ติดตามคลิกไปยังผลิตภัณฑ์เพื่อรับค่าคอมมิชชั่น</li>
+      </ul>
+
+      <h3>3.2 การจัดการ Cookies</h3>
+      <p>คุณสามารถตั้งค่าเบราว์เซอร์เพื่อปฏิเสธ cookies ได้ แต่อาจส่งผลต่อการใช้งานบางฟีเจอร์ของเว็บไซต์</p>
+
+      <h2>4. การแบ่งปันข้อมูลกับบุคคลที่สาม</h2>
+      <p>เราอาจแบ่งปันข้อมูลของคุณกับ:</p>
+      <ul>
+        <li><strong>บริการวิเคราะห์:</strong> Google Analytics, Google Tag Manager</li>
+        <li><strong>แพลตฟอร์มโฆษณา:</strong> Google Ads, Meta (Facebook/Instagram)</li>
+        <li><strong>โปรแกรม Affiliate:</strong> Amazon Associates, Lazada Affiliate, Shopee Affiliate, และพันธมิตรอื่นๆ</li>
+        <li><strong>บริการโฮสติ้ง:</strong> GitHub Pages (อาจเก็บข้อมูล IP address และข้อมูลเทคนิค)</li>
+      </ul>
+      <p>บุคคลที่สามเหล่านี้มีนโยบายความเป็นส่วนตัวของตนเอง และเราไม่สามารถควบคุมการใช้ข้อมูลของพวกเขาได้</p>
+
+      <h2>5. Affiliate Links และการเปิดเผยข้อมูล</h2>
+      <p>เว็บไซต์ของเราเป็นส่วนหนึ่งของโปรแกรม affiliate marketing หลายโปรแกรม ซึ่งหมายความว่า</p>
+      <ul>
+        <li>เราอาจได้รับค่าคอมมิชชั่นเมื่อคุณคลิกลิงก์และซื้อสินค้า</li>
+        <li>Cookies จะถูกวางบนอุปกรณ์ของคุณเพื่อติดตามการซื้อ</li>
+        <li>ราคาสินค้าของคุณจะไม่เปลี่ยนแปลงจากการใช้ affiliate links</li>
+        <li>ข้อมูลการคลิกและซื้อจะถูกส่งไปยังผู้ขายและเครือข่าย affiliate</li>
+      </ul>
+
+      <h2>6. ระยะเวลาการเก็บข้อมูล</h2>
+      <p>เราจะเก็บข้อมูลส่วนบุคคลของคุณไว้ตามระยะเวลาที่จำเป็น</p>
+      <ul>
+        <li>ข้อมูล Analytics: 26 เดือน (ตามค่าเริ่มต้นของ Google Analytics)</li>
+        <li>ข้อมูลผู้สมัครจดหมายข่าว: จนกว่าคุณจะยกเลิกการสมัคร</li>
+        <li>Cookies: ตามระยะเวลาที่กำหนดในแต่ละประเภท (1 วัน - 2 ปี)</li>
+      </ul>
+
+      <h2>7. สิทธิของคุณตาม PDPA</h2>
+      <p>ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล คุณมีสิทธิ์</p>
+      <ul>
+        <li><strong>สิทธิเข้าถึงข้อมูล:</strong> ขอดูข้อมูลส่วนบุคคลที่เราเก็บไว้</li>
+        <li><strong>สิทธิแก้ไข:</strong> ขอแก้ไขข้อมูลที่ไม่ถูกต้อง</li>
+        <li><strong>สิทธิลบข้อมูล:</strong> ขอให้ลบข้อมูลของคุณ</li>
+        <li><strong>สิทธิคัดค้าน:</strong> คัดค้านการประมวลผลข้อมูล</li>
+        <li><strong>สิทธิถอนความยินยอม:</strong> ถอนความยินยอมที่ให้ไว้ได้ทุกเมื่อ</li>
+        <li><strong>สิทธิขอรับข้อมูล:</strong> ขอรับสำเนาข้อมูลในรูปแบบที่อ่านได้</li>
+      </ul>
+
+      <h2>8. ความปลอดภัยของข้อมูล</h2>
+      <p>เราใช้มาตรการรักษาความปลอดภัยที่เหมาะสมเพื่อป้องกันการเข้าถึง เปลี่ยนแปลง หรือเปิดเผยข้อมูลโดยไม่ได้รับอนุญาต</p>
+      <ul>
+        <li>เว็บไซต์ใช้ HTTPS encryption</li>
+        <li>จำกัดการเข้าถึงข้อมูลเฉพาะผู้ที่จำเป็น</li>
+        <li>ทบทวนนโยบายความปลอดภัยอย่างสม่ำเสมอ</li>
+      </ul>
+
+      <h2>9. ลิงก์ไปยังเว็บไซต์อื่น</h2>
+      <p>เว็บไซต์ของเราอาจมีลิงก์ไปยังเว็บไซต์ภายนอก เราไม่รับผิดชอบต่อนโยบายความเป็นส่วนตัวหรือเนื้อหาของเว็บไซต์เหล่านั้น เราแนะนำให้คุณอ่านนโยบายความเป็นส่วนตัวของทุกเว็บไซต์ที่คุณเข้าเยี่ยมชม</p>
+
+      <h2>10. เด็กและเยาวชน</h2>
+      <p>เว็บไซต์ของเราไม่ได้มุ่งเป้าไปยังเด็กอายุต่ำกว่า 13 ปี เราไม่เก็บรวบรวมข้อมูลจากเด็กโดยเจตนา หากคุณเชื่อว่าเราได้เก็บข้อมูลจากเด็ก กรุณาติดต่อเรา</p>
+
+      <h2>11. การเปลี่ยนแปลงนโยบาย</h2>
+      <p>เราอาจอัพเดทนโยบายนี้เป็นครั้งคราว การเปลี่ยนแปลงจะมีผลทันทีเมื่อเผยแพร่บนหน้านี้ เราแนะนำให้ตรวจสอบหน้านี้เป็นระยะเพื่อดูการเปลี่ยนแปลง</p>
+
+      <h2>12. การถ่ายโอนข้อมูลข้ามประเทศ</h2>
+      <p>ข้อมูลของคุณอาจถูกประมวลผลและจัดเก็บบนเซิร์ฟเวอร์ที่ตั้งอยู่นอกประเทศไทย รวมถึงสหรัฐอเมริกาและสหภาพยุโรป เราจะดำเนินการตามขั้นตอนที่เหมาะสมเพื่อให้แน่ใจว่าข้อมูลของคุณได้รับการปกป้องอย่างเพียงพอ</p>
+
+      <div class="contact-box">
+        <h2>13. ติดต่อเรา</h2>
+        <p>หากคุณมีคำถามเกี่ยวกับนโยบายนี้ หรือต้องการใช้สิทธิของคุณ กรุณาติดต่อ</p>
+        <ul>
+          <li><strong>อีเมล:</strong> <span class="highlight">[ใส่อีเมลของคุณ]</span></li>
+          <li><strong>เว็บไซต์:</strong> <span class="highlight">[ใส่ URL ของเว็บไซต์หลัก]</span></li>
+        </ul>
+      </div>
+
+      <footer>
+        <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
+      </footer>
+    </div>
+
+    <!-- English Version -->
+    <div id="en-section" class="lang-section">
+      <header>
+        <h1>Privacy Policy</h1>
+        <p class="muted">Last Updated: February 1, 2026</p>
+      </header>
+
+      <div class="info-box">
+        <h3>This policy applies to the following websites:</h3>
+        <ul>
+          <li><a href="https://gamegearth.com">gamegearth.com</a></li>
+          <li><span class="highlight">[Add your other website names here]</span></li>
+        </ul>
+      </div>
+
+      <p>We respect your privacy and are committed to protecting your personal data in accordance with Thailand's Personal Data Protection Act (PDPA).</p>
+
+      <h2>1. Information We Collect</h2>
+
+      <h3>1.1 Information You Provide Directly</h3>
+      <ul>
+        <li>Name and email (when subscribing to newsletters)</li>
+        <li>Comments and feedback</li>
+      </ul>
+
+      <h3>1.2 Automatically Collected Information</h3>
+      <ul>
+        <li><strong>Usage data:</strong> Pages visited, time spent, links clicked</li>
+        <li><strong>Device data:</strong> Browser type, operating system, IP address</li>
+        <li><strong>Cookies and tracking technologies:</strong> Used to analyze behavior and improve experience</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We use your data to:</p>
+      <ul>
+        <li>Improve website content and user experience</li>
+        <li>Analyze user behavior via Google Analytics and other tools</li>
+        <li>Display relevant ads via Meta Pixel and Google Ads</li>
+        <li>Track affiliate link clicks for commission purposes</li>
+        <li>Send newsletters and updates (with your consent)</li>
+      </ul>
+
+      <h2>3. Cookies and Tracking</h2>
+      <p>We use essential, analytics, advertising, and affiliate cookies to improve your experience.</p>
+
+      <h3>3.1 Types of Cookies</h3>
+      <ul>
+        <li><strong>Essential cookies:</strong> Required for the website to function</li>
+        <li><strong>Analytics cookies:</strong> Google Analytics, Google Tag Manager</li>
+        <li><strong>Advertising cookies:</strong> Meta Pixel, Google Ads</li>
+        <li><strong>Affiliate cookies:</strong> Track clicks to products for commission tracking</li>
+      </ul>
+
+      <h3>3.2 Managing Cookies</h3>
+      <p>You can configure your browser to reject cookies, but this may affect some website features.</p>
+
+      <h2>4. Sharing Data with Third Parties</h2>
+      <p>We may share your data with:</p>
+      <ul>
+        <li><strong>Analytics services:</strong> Google Analytics, Google Tag Manager</li>
+        <li><strong>Advertising platforms:</strong> Google Ads, Meta (Facebook/Instagram)</li>
+        <li><strong>Affiliate programs:</strong> Amazon Associates, Lazada Affiliate, Shopee Affiliate, and others</li>
+        <li><strong>Hosting services:</strong> GitHub Pages (may store IP address and technical data)</li>
+      </ul>
+      <p>These third parties have their own privacy policies, and we cannot control their use of data.</p>
+
+      <h2>5. Affiliate Disclosure</h2>
+      <p>Our websites participate in affiliate marketing programs, which means:</p>
+      <ul>
+        <li>We may earn commissions when you click links and make purchases</li>
+        <li>Cookies will be placed on your device to track purchases</li>
+        <li>Product prices are not affected by your use of affiliate links</li>
+        <li>Click and purchase data is sent to merchants and affiliate networks</li>
+      </ul>
+
+      <h2>6. Data Retention</h2>
+      <p>We retain your personal data only as long as necessary:</p>
+      <ul>
+        <li>Analytics data: 26 months (Google Analytics default)</li>
+        <li>Newsletter subscriber data: Until you unsubscribe</li>
+        <li>Cookies: Per type (1 day – 2 years)</li>
+      </ul>
+
+      <h2>7. Your Rights Under PDPA</h2>
+      <p>Under Thailand's Personal Data Protection Act, you have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> Request to view your personal data</li>
+        <li><strong>Rectify:</strong> Request correction of inaccurate data</li>
+        <li><strong>Erase:</strong> Request deletion of your data</li>
+        <li><strong>Object:</strong> Object to data processing</li>
+        <li><strong>Withdraw consent:</strong> Withdraw consent at any time</li>
+        <li><strong>Data portability:</strong> Request a copy of your data in a readable format</li>
+      </ul>
+
+      <h2>8. Data Security</h2>
+      <p>We use appropriate security measures to prevent unauthorized access, modification, or disclosure of data:</p>
+      <ul>
+        <li>Website uses HTTPS encryption</li>
+        <li>Access to data is restricted to those who need it</li>
+        <li>Security policies are reviewed regularly</li>
+      </ul>
+
+      <h2>9. Links to Other Websites</h2>
+      <p>Our website may contain links to external websites. We are not responsible for the privacy policies or content of those sites. We recommend reading the privacy policy of every website you visit.</p>
+
+      <h2>10. Children</h2>
+      <p>Our website is not targeted at children under 13. We do not intentionally collect data from children. If you believe we have collected data from a child, please contact us.</p>
+
+      <h2>11. Policy Changes</h2>
+      <p>We may update this policy from time to time. Changes take effect immediately upon publication. We recommend checking this page periodically for updates.</p>
+
+      <h2>12. International Data Transfers</h2>
+      <p>Your data may be processed and stored on servers outside Thailand, including in the United States and European Union. We will take appropriate steps to ensure your data is adequately protected.</p>
+
+      <div class="contact-box">
+        <h2>13. Contact Us</h2>
+        <p>If you have questions about this policy or wish to exercise your rights, please contact:</p>
+        <ul>
+          <li><strong>Email:</strong> <span class="highlight">[your email]</span></li>
+          <li><strong>Website:</strong> <span class="highlight">[your website URL]</span></li>
+        </ul>
+      </div>
+
+      <footer>
+        <p class="note">This document provides general information and is not legal advice.</p>
+      </footer>
+    </div>
+
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      if (lang === 'en') {
+        document.getElementById('en-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      } else {
+        document.getElementById('th-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      }
+    }
+  </script>
 </body>
 </html>

@@ -3,51 +3,201 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Data Deletion</title>
+  <title>Data Deletion | ลบข้อมูล - MealRecovery</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:24px;line-height:1.6;color:#111}
-    .container{max-width:900px}
-    .note{color:#666;font-size:0.9em;margin-top:8px}
+    body{
+      font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      margin:24px;
+      line-height:1.6;
+      color:#111;
+      background:#f8f9fa;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:40px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .note{
+      color:#666;
+      font-size:0.9em;
+      margin-top:8px;
+      padding:12px;
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+    }
     .muted{color:#4c4c4c}
+    h1{
+      color:#1a73e8;
+      border-bottom:2px solid #1a73e8;
+      padding-bottom:12px;
+    }
+    h2{
+      color:#333;
+      margin-top:32px;
+      border-left:4px solid #1a73e8;
+      padding-left:12px;
+    }
+    ol,ul{margin-left:20px}
+    li{margin-bottom:8px}
+    strong{color:#1a73e8}
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #ddd;
+    }
+    .lang-toggle{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .lang-btn{
+      display:inline-block;
+      padding:8px 20px;
+      margin:0 4px;
+      border:2px solid #1a73e8;
+      border-radius:20px;
+      color:#1a73e8;
+      cursor:pointer;
+      transition:all 0.3s;
+      font-weight:600;
+      background:white;
+    }
+    .lang-btn:hover{
+      background:#e8f0fe;
+    }
+    .lang-btn.active{
+      background:#1a73e8;
+      color:white;
+    }
+    .lang-section{display:none}
+    .lang-section.active{display:block}
+    .email-highlight{
+      background:#fff3cd;
+      padding:2px 6px;
+      border-radius:3px;
+      font-weight:600;
+    }
+    .app-name{
+      text-align:center;
+      font-size:1.8em;
+      font-weight:bold;
+      color:#1a73e8;
+      margin-bottom:8px;
+    }
+    @media (max-width:768px){
+      body{margin:12px}
+      .container{padding:24px 16px}
+      h1{font-size:1.6em}
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Data Deletion</h1>
-      <p class="muted">Instructions for deleting data inside the MealRecovery app.</p>
-    </header>
+    <div class="app-name">🍽️ MealRecovery</div>
 
-    <section>
-      <h2>Delete a single day log</h2>
-      <ol>
-        <li>Open the MealRecovery app.</li>
-        <li>Go to the <strong>Log</strong> tab.</li>
-        <li>In the "Logged today" card, tap <strong>Delete today log</strong>.</li>
-      </ol>
-      <p class="note">This deletes only today's log.</p>
-    </section>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('th')">ภาษาไทย</button>
+    </div>
 
-    <section>
-      <h2>Delete all logs</h2>
-      <ol>
-        <li>Open the MealRecovery app.</li>
-        <li>Go to the <strong>History</strong> tab.</li>
-        <li>Scroll to <strong>Data tools</strong>.</li>
-        <li>Tap <strong>Clear all logs</strong> and confirm.</li>
-      </ol>
-      <p class="note">This removes all stored meal timing logs and resets your streak history.</p>
-    </section>
+    <!-- English Version -->
+    <div id="en-section" class="lang-section active">
+      <header>
+        <h1>Data Deletion</h1>
+        <p class="muted">Instructions for deleting data inside the MealRecovery app.</p>
+      </header>
 
-    <section>
-      <h2>Guest mode note</h2>
-      <p>Guest mode has no account data on the server. Clearing logs in the app removes local data.</p>
-    </section>
+      <section>
+        <h2>Delete a single day log</h2>
+        <ol>
+          <li>Open the MealRecovery app.</li>
+          <li>Go to the <strong>Log</strong> tab.</li>
+          <li>In the "Logged today" card, tap <strong>Delete today log</strong>.</li>
+        </ol>
+        <p class="note">This deletes only today's log.</p>
+      </section>
 
-    <footer>
-      <p>Contact: north.affhub@gmail.com</p>
-      <p class="note">This document provides general information and is not legal advice.</p>
-    </footer>
+      <section>
+        <h2>Delete all logs</h2>
+        <ol>
+          <li>Open the MealRecovery app.</li>
+          <li>Go to the <strong>History</strong> tab.</li>
+          <li>Scroll to <strong>Data tools</strong>.</li>
+          <li>Tap <strong>Clear all logs</strong> and confirm.</li>
+        </ol>
+        <p class="note">This removes all stored meal timing logs and resets your streak history.</p>
+      </section>
+
+      <section>
+        <h2>Guest mode note</h2>
+        <p>Guest mode has no account data on the server. Clearing logs in the app removes local data.</p>
+      </section>
+
+      <footer>
+        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">This document provides general information and is not legal advice.</p>
+      </footer>
+    </div>
+
+    <!-- Thai Version -->
+    <div id="th-section" class="lang-section">
+      <header>
+        <h1>ลบข้อมูล</h1>
+        <p class="muted">คำแนะนำในการลบข้อมูลในแอป MealRecovery</p>
+      </header>
+
+      <section>
+        <h2>ลบบันทึกเพียงวันเดียว</h2>
+        <ol>
+          <li>เปิดแอป MealRecovery</li>
+          <li>ไปที่แท็บ <strong>Log</strong></li>
+          <li>ในการ์ด "Logged today" แตะ <strong>Delete today log</strong></li>
+        </ol>
+        <p class="note">การลบนี้จะลบเฉพาะบันทึกของวันนี้เท่านั้น</p>
+      </section>
+
+      <section>
+        <h2>ลบบันทึกทั้งหมด</h2>
+        <ol>
+          <li>เปิดแอป MealRecovery</li>
+          <li>ไปที่แท็บ <strong>History</strong></li>
+          <li>เลื่อนไปที่ <strong>Data tools</strong></li>
+          <li>แตะ <strong>Clear all logs</strong> และยืนยัน</li>
+        </ol>
+        <p class="note">การลบนี้จะลบบันทึกเวลาทานอาหารทั้งหมดและรีเซ็ตประวัติ Streak ของคุณ</p>
+      </section>
+
+      <section>
+        <h2>หมายเหตุสำหรับโหมดผู้เยี่ยมชม</h2>
+        <p>โหมดผู้เยี่ยมชมไม่มีข้อมูลบัญชีบนเซิร์ฟเวอร์ การลบบันทึกในแอปจะลบข้อมูลในเครื่องเท่านั้น</p>
+      </section>
+
+      <footer>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
+      </footer>
+    </div>
   </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      if (lang === 'en') {
+        document.getElementById('en-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      } else {
+        document.getElementById('th-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      }
+    }
+  </script>
 </body>
 </html>
