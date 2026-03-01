@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Data Deletion | ลบข้อมูล - MealRecovery</title>
+  <title>Data Deletion</title>
   <style>
     body{
       font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
@@ -65,13 +65,8 @@
       font-weight:600;
       background:white;
     }
-    .lang-btn:hover{
-      background:#e8f0fe;
-    }
-    .lang-btn.active{
-      background:#1a73e8;
-      color:white;
-    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
     .lang-section{display:none}
     .lang-section.active{display:block}
     .email-highlight{
@@ -96,7 +91,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="app-name">🍽️ MealRecovery</div>
+    <div class="app-name" data-fill="app-icon-name"></div>
 
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="switchLang('en')">English</button>
@@ -107,37 +102,39 @@
     <div id="en-section" class="lang-section active">
       <header>
         <h1>Data Deletion</h1>
-        <p class="muted">Instructions for deleting data inside the MealRecovery app.</p>
+        <p class="muted">Instructions for deleting data inside the <span data-fill="app-name"></span> app.</p>
       </header>
 
+      <!-- CUSTOMIZE: Add, remove, or rename sections to match your app's data deletion flows -->
+
       <section>
-        <h2>Delete a single day log</h2>
+        <h2>Delete a single record</h2>
         <ol>
-          <li>Open the MealRecovery app.</li>
-          <li>Go to the <strong>Log</strong> tab.</li>
-          <li>In the "Logged today" card, tap <strong>Delete today log</strong>.</li>
+          <li>Open the <span data-fill="app-name"></span> app.</li>
+          <li>Navigate to the relevant screen.</li>
+          <li>Tap the delete option on the item you want to remove.</li>
         </ol>
-        <p class="note">This deletes only today's log.</p>
+        <p class="note">This deletes only the selected record.</p>
       </section>
 
       <section>
-        <h2>Delete all logs</h2>
+        <h2>Delete all data</h2>
         <ol>
-          <li>Open the MealRecovery app.</li>
-          <li>Go to the <strong>History</strong> tab.</li>
-          <li>Scroll to <strong>Data tools</strong>.</li>
-          <li>Tap <strong>Clear all logs</strong> and confirm.</li>
+          <li>Open the <span data-fill="app-name"></span> app.</li>
+          <li>Go to <strong>Settings</strong>.</li>
+          <li>Scroll to <strong>Data</strong>.</li>
+          <li>Tap <strong>Clear all data</strong> and confirm.</li>
         </ol>
-        <p class="note">This removes all stored meal timing logs and resets your streak history.</p>
+        <p class="note">This removes all locally stored data from your device.</p>
       </section>
 
       <section>
         <h2>Guest mode note</h2>
-        <p>Guest mode has no account data on the server. Clearing logs in the app removes local data.</p>
+        <p>Guest mode has no account data on the server. Clearing data in the app removes local data only.</p>
       </section>
 
       <footer>
-        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p><strong>Contact:</strong> <span class="email-highlight" data-fill="email"></span></p>
         <p class="note">This document provides general information and is not legal advice.</p>
       </footer>
     </div>
@@ -146,50 +143,70 @@
     <div id="th-section" class="lang-section">
       <header>
         <h1>ลบข้อมูล</h1>
-        <p class="muted">คำแนะนำในการลบข้อมูลในแอป MealRecovery</p>
+        <p class="muted">คำแนะนำในการลบข้อมูลในแอป <span data-fill="app-name"></span></p>
       </header>
 
+      <!-- CUSTOMIZE: เพิ่ม ลบ หรือเปลี่ยนชื่อหัวข้อให้ตรงกับแอปของคุณ -->
+
       <section>
-        <h2>ลบบันทึกเพียงวันเดียว</h2>
+        <h2>ลบรายการเดียว</h2>
         <ol>
-          <li>เปิดแอป MealRecovery</li>
-          <li>ไปที่แท็บ <strong>Log</strong></li>
-          <li>ในการ์ด "Logged today" แตะ <strong>Delete today log</strong></li>
+          <li>เปิดแอป <span data-fill="app-name"></span></li>
+          <li>ไปยังหน้าจอที่ต้องการ</li>
+          <li>แตะตัวเลือกลบบนรายการที่ต้องการลบ</li>
         </ol>
-        <p class="note">การลบนี้จะลบเฉพาะบันทึกของวันนี้เท่านั้น</p>
+        <p class="note">การลบนี้จะลบเฉพาะรายการที่เลือกเท่านั้น</p>
       </section>
 
       <section>
-        <h2>ลบบันทึกทั้งหมด</h2>
+        <h2>ลบข้อมูลทั้งหมด</h2>
         <ol>
-          <li>เปิดแอป MealRecovery</li>
-          <li>ไปที่แท็บ <strong>History</strong></li>
-          <li>เลื่อนไปที่ <strong>Data tools</strong></li>
-          <li>แตะ <strong>Clear all logs</strong> และยืนยัน</li>
+          <li>เปิดแอป <span data-fill="app-name"></span></li>
+          <li>ไปที่ <strong>การตั้งค่า</strong></li>
+          <li>เลื่อนไปที่ <strong>ข้อมูล</strong></li>
+          <li>แตะ <strong>ลบข้อมูลทั้งหมด</strong> และยืนยัน</li>
         </ol>
-        <p class="note">การลบนี้จะลบบันทึกเวลาทานอาหารทั้งหมดและรีเซ็ตประวัติ Streak ของคุณ</p>
+        <p class="note">การลบนี้จะลบข้อมูลทั้งหมดที่เก็บอยู่ในเครื่องของคุณ</p>
       </section>
 
       <section>
         <h2>หมายเหตุสำหรับโหมดผู้เยี่ยมชม</h2>
-        <p>โหมดผู้เยี่ยมชมไม่มีข้อมูลบัญชีบนเซิร์ฟเวอร์ การลบบันทึกในแอปจะลบข้อมูลในเครื่องเท่านั้น</p>
+        <p>โหมดผู้เยี่ยมชมไม่มีข้อมูลบัญชีบนเซิร์ฟเวอร์ การลบข้อมูลในแอปจะลบเฉพาะข้อมูลในเครื่องเท่านั้น</p>
       </section>
 
       <footer>
-        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight" data-fill="email"></span></p>
         <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
       </footer>
     </div>
   </div>
 
   <script>
+    // ============================================================
+    // ✏️  CONFIG — แก้ไขเฉพาะส่วนนี้สำหรับแอปของคุณ
+    //     Edit only this section to customize for your app
+    // ============================================================
+    const CONFIG = {
+      APP_NAME:      'MyApp',               // ชื่อแอป / App name
+      APP_ICON:      '📱',                  // emoji ไอคอน / App icon emoji
+      SUPPORT_EMAIL: 'support@example.com', // อีเมลสนับสนุน / Support email
+    };
+    // ============================================================
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.title = `Data Deletion | ลบข้อมูล — ${CONFIG.APP_NAME}`;
+      document.querySelectorAll('[data-fill]').forEach(el => {
+        switch (el.dataset.fill) {
+          case 'app-name':      el.textContent = CONFIG.APP_NAME; break;
+          case 'app-icon-name': el.textContent = `${CONFIG.APP_ICON} ${CONFIG.APP_NAME}`; break;
+          case 'email':         el.textContent = CONFIG.SUPPORT_EMAIL; break;
+        }
+      });
+    });
+
     function switchLang(lang) {
-      document.querySelectorAll('.lang-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       if (lang === 'en') {
         document.getElementById('en-section').classList.add('active');
         document.querySelectorAll('.lang-btn')[0].classList.add('active');

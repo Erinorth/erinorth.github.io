@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Account Deletion | ลบบัญชี - MealRecovery</title>
+  <title>Account Deletion</title>
   <style>
     body{
       font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
@@ -65,13 +65,8 @@
       font-weight:600;
       background:white;
     }
-    .lang-btn:hover{
-      background:#e8f0fe;
-    }
-    .lang-btn.active{
-      background:#1a73e8;
-      color:white;
-    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
     .lang-section{display:none}
     .lang-section.active{display:block}
     .email-highlight{
@@ -96,8 +91,8 @@
 </head>
 <body>
   <div class="container">
-    <div class="app-name">🍽️ MealRecovery</div>
-    
+    <div class="app-name" data-fill="app-icon-name"></div>
+
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="switchLang('en')">English</button>
       <button class="lang-btn" onclick="switchLang('th')">ภาษาไทย</button>
@@ -107,29 +102,30 @@
     <div id="en-section" class="lang-section active">
       <header>
         <h1>Account Deletion</h1>
-        <p class="muted">Instructions for deleting your account inside the MealRecovery app.</p>
+        <p class="muted">Instructions for deleting your account inside the <span data-fill="app-name"></span> app.</p>
       </header>
 
       <section>
         <h2>In-app account deletion steps</h2>
+        <!-- CUSTOMIZE: Update these steps to match your app's UI flow -->
         <ol>
-          <li>Open the MealRecovery app.</li>
+          <li>Open the <span data-fill="app-name"></span> app.</li>
           <li>Tap the <strong>Account</strong> icon in the top-right corner.</li>
           <li>On the <strong>Account</strong> screen, tap <strong>Request account deletion</strong>.</li>
           <li>Your email app will open with a prefilled deletion request.</li>
-          <li>Send the email to <strong class="email-highlight">north.affhub@gmail.com</strong>.</li>
+          <li>Send the email to <strong><span class="email-highlight" data-fill="email"></span></strong>.</li>
         </ol>
         <p class="note">📌 If the email app cannot open, the support email will be copied so you can paste it manually.</p>
-        <p class="note">👤 Guest mode has no account to delete. You can clear local data from History (Clear all logs).</p>
+        <p class="note">👤 Guest mode has no account to delete. You can clear local data from the app settings.</p>
       </section>
 
       <section>
         <h2>Data that will be deleted</h2>
+        <!-- CUSTOMIZE: Update this list to reflect your app's stored data -->
         <ul>
           <li>🔐 User account and authentication records in our system</li>
           <li>📊 Entitlement data tied to your account</li>
-          <li>💪 All workout logs and meal timing records</li>
-          <li>🔥 Streak data and achievements</li>
+          <li>📋 All activity logs and records</li>
           <li>⚙️ User preferences and settings</li>
         </ul>
         <p class="note">💳 Payment data is handled by the app stores (Google Play / App Store) under their policies.</p>
@@ -146,13 +142,13 @@
         <ul>
           <li>⚠️ Account deletion is <strong>permanent and cannot be undone</strong></li>
           <li>🔄 Active subscriptions should be cancelled through your app store first</li>
-          <li>📧 You will no longer receive emails from MealRecovery</li>
+          <li>📧 You will no longer receive emails from <span data-fill="app-name"></span></li>
           <li>🆕 To use the app again, you must create a new account</li>
         </ul>
       </section>
 
       <footer>
-        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p><strong>Contact:</strong> <span class="email-highlight" data-fill="email"></span></p>
         <p class="note">This document provides general information and is not legal advice.</p>
       </footer>
     </div>
@@ -161,29 +157,30 @@
     <div id="th-section" class="lang-section">
       <header>
         <h1>ลบบัญชี</h1>
-        <p class="muted">คำแนะนำในการลบบัญชีของคุณในแอป MealRecovery</p>
+        <p class="muted">คำแนะนำในการลบบัญชีของคุณในแอป <span data-fill="app-name"></span></p>
       </header>
 
       <section>
         <h2>ขั้นตอนการลบบัญชีในแอป</h2>
+        <!-- CUSTOMIZE: อัปเดตขั้นตอนให้ตรงกับ UI ของแอปของคุณ -->
         <ol>
-          <li>เปิดแอป MealRecovery</li>
+          <li>เปิดแอป <span data-fill="app-name"></span></li>
           <li>แตะไอคอน <strong>Account</strong> (บัญชี) ที่มุมบนขวา</li>
           <li>ในหน้า <strong>Account</strong> แตะ <strong>Request account deletion</strong> (ขอลบบัญชี)</li>
           <li>แอปอีเมลจะเปิดขึ้นพร้อมข้อความคำขอลบบัญชีที่กรอกไว้แล้ว</li>
-          <li>ส่งอีเมลไปที่ <strong class="email-highlight">north.affhub@gmail.com</strong></li>
+          <li>ส่งอีเมลไปที่ <strong><span class="email-highlight" data-fill="email"></span></strong></li>
         </ol>
         <p class="note">📌 หากแอปอีเมลไม่สามารถเปิดได้ อีเมลสนับสนุนจะถูกคัดลอกเพื่อให้คุณวางได้เอง</p>
-        <p class="note">👤 โหมดผู้เยี่ยมชม (Guest mode) ไม่มีบัญชีให้ลบ คุณสามารถลบข้อมูลในเครื่องได้จาก History (Clear all logs)</p>
+        <p class="note">👤 โหมดผู้เยี่ยมชม (Guest mode) ไม่มีบัญชีให้ลบ คุณสามารถลบข้อมูลในเครื่องได้จากการตั้งค่าแอป</p>
       </section>
 
       <section>
         <h2>ข้อมูลที่จะถูกลบ</h2>
+        <!-- CUSTOMIZE: อัปเดตรายการนี้ให้ตรงกับข้อมูลที่แอปของคุณเก็บ -->
         <ul>
           <li>🔐 บัญชีผู้ใช้และข้อมูลการยืนยันตัวตนในระบบของเรา</li>
           <li>📊 ข้อมูลสิทธิ์ที่เชื่อมโยงกับบัญชีของคุณ</li>
-          <li>💪 บันทึกการออกกำลังกายและเวลาทานอาหารทั้งหมด</li>
-          <li>🔥 ข้อมูล Streak และความสำเร็จต่างๆ</li>
+          <li>📋 บันทึกกิจกรรมและข้อมูลทั้งหมด</li>
           <li>⚙️ การตั้งค่าและความชอบส่วนบุคคล</li>
         </ul>
         <p class="note">💳 ข้อมูลการชำระเงินจัดการโดย App Store (Google Play / App Store) ภายใต้นโยบายของพวกเขา</p>
@@ -200,31 +197,44 @@
         <ul>
           <li>⚠️ การลบบัญชีเป็น<strong>การถาวรและไม่สามารถยกเลิกได้</strong></li>
           <li>🔄 ควรยกเลิก Subscription ที่ทำงานอยู่ผ่าน App Store ก่อน</li>
-          <li>📧 คุณจะไม่ได้รับอีเมลจาก MealRecovery อีกต่อไป</li>
+          <li>📧 คุณจะไม่ได้รับอีเมลจาก <span data-fill="app-name"></span> อีกต่อไป</li>
           <li>🆕 หากต้องการใช้งานแอปอีกครั้ง คุณต้องสร้างบัญชีใหม่</li>
         </ul>
       </section>
 
       <footer>
-        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight" data-fill="email"></span></p>
         <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
       </footer>
     </div>
   </div>
 
   <script>
+    // ============================================================
+    // ✏️  CONFIG — แก้ไขเฉพาะส่วนนี้สำหรับแอปของคุณ
+    //     Edit only this section to customize for your app
+    // ============================================================
+    const CONFIG = {
+      APP_NAME:      'MyApp',               // ชื่อแอป / App name
+      APP_ICON:      '📱',                  // emoji ไอคอน / App icon emoji
+      SUPPORT_EMAIL: 'support@example.com', // อีเมลสนับสนุน / Support email
+    };
+    // ============================================================
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.title = `Account Deletion | ลบบัญชี — ${CONFIG.APP_NAME}`;
+      document.querySelectorAll('[data-fill]').forEach(el => {
+        switch (el.dataset.fill) {
+          case 'app-name':      el.textContent = CONFIG.APP_NAME; break;
+          case 'app-icon-name': el.textContent = `${CONFIG.APP_ICON} ${CONFIG.APP_NAME}`; break;
+          case 'email':         el.textContent = CONFIG.SUPPORT_EMAIL; break;
+        }
+      });
+    });
+
     function switchLang(lang) {
-      // Hide all sections
-      document.querySelectorAll('.lang-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      
-      // Remove active from all buttons
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      
-      // Show selected language
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       if (lang === 'en') {
         document.getElementById('en-section').classList.add('active');
         document.querySelectorAll('.lang-btn')[0].classList.add('active');
