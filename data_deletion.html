@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Data Deletion</title>
+  <title>Data Deletion | ลบข้อมูล</title>
   <style>
     body{
       font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
@@ -75,13 +75,6 @@
       border-radius:3px;
       font-weight:600;
     }
-    .app-name{
-      text-align:center;
-      font-size:1.8em;
-      font-weight:bold;
-      color:#1a73e8;
-      margin-bottom:8px;
-    }
     @media (max-width:768px){
       body{margin:12px}
       .container{padding:24px 16px}
@@ -91,7 +84,6 @@
 </head>
 <body>
   <div class="container">
-    <div class="app-name" data-fill="app-icon-name"></div>
 
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="switchLang('en')">English</button>
@@ -102,15 +94,13 @@
     <div id="en-section" class="lang-section active">
       <header>
         <h1>Data Deletion</h1>
-        <p class="muted">Instructions for deleting data inside the <span data-fill="app-name"></span> app.</p>
+        <p class="muted">Instructions for deleting data inside the app.</p>
       </header>
-
-      <!-- CUSTOMIZE: Add, remove, or rename sections to match your app's data deletion flows -->
 
       <section>
         <h2>Delete a single record</h2>
         <ol>
-          <li>Open the <span data-fill="app-name"></span> app.</li>
+          <li>Open the app.</li>
           <li>Navigate to the relevant screen.</li>
           <li>Tap the delete option on the item you want to remove.</li>
         </ol>
@@ -120,7 +110,7 @@
       <section>
         <h2>Delete all data</h2>
         <ol>
-          <li>Open the <span data-fill="app-name"></span> app.</li>
+          <li>Open the app.</li>
           <li>Go to <strong>Settings</strong>.</li>
           <li>Scroll to <strong>Data</strong>.</li>
           <li>Tap <strong>Clear all data</strong> and confirm.</li>
@@ -134,7 +124,7 @@
       </section>
 
       <footer>
-        <p><strong>Contact:</strong> <span class="email-highlight" data-fill="email"></span></p>
+        <p><strong>Contact:</strong> <span class="email-highlight">support@example.com</span></p>
         <p class="note">This document provides general information and is not legal advice.</p>
       </footer>
     </div>
@@ -143,15 +133,13 @@
     <div id="th-section" class="lang-section">
       <header>
         <h1>ลบข้อมูล</h1>
-        <p class="muted">คำแนะนำในการลบข้อมูลในแอป <span data-fill="app-name"></span></p>
+        <p class="muted">คำแนะนำในการลบข้อมูลในแอป</p>
       </header>
-
-      <!-- CUSTOMIZE: เพิ่ม ลบ หรือเปลี่ยนชื่อหัวข้อให้ตรงกับแอปของคุณ -->
 
       <section>
         <h2>ลบรายการเดียว</h2>
         <ol>
-          <li>เปิดแอป <span data-fill="app-name"></span></li>
+          <li>เปิดแอป</li>
           <li>ไปยังหน้าจอที่ต้องการ</li>
           <li>แตะตัวเลือกลบบนรายการที่ต้องการลบ</li>
         </ol>
@@ -161,7 +149,7 @@
       <section>
         <h2>ลบข้อมูลทั้งหมด</h2>
         <ol>
-          <li>เปิดแอป <span data-fill="app-name"></span></li>
+          <li>เปิดแอป</li>
           <li>ไปที่ <strong>การตั้งค่า</strong></li>
           <li>เลื่อนไปที่ <strong>ข้อมูล</strong></li>
           <li>แตะ <strong>ลบข้อมูลทั้งหมด</strong> และยืนยัน</li>
@@ -175,35 +163,13 @@
       </section>
 
       <footer>
-        <p><strong>ติดต่อ:</strong> <span class="email-highlight" data-fill="email"></span></p>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight">support@example.com</span></p>
         <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
       </footer>
     </div>
   </div>
 
   <script>
-    // ============================================================
-    // ✏️  CONFIG — แก้ไขเฉพาะส่วนนี้สำหรับแอปของคุณ
-    //     Edit only this section to customize for your app
-    // ============================================================
-    const CONFIG = {
-      APP_NAME:      'MyApp',               // ชื่อแอป / App name
-      APP_ICON:      '📱',                  // emoji ไอคอน / App icon emoji
-      SUPPORT_EMAIL: 'support@example.com', // อีเมลสนับสนุน / Support email
-    };
-    // ============================================================
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.title = `Data Deletion | ลบข้อมูล — ${CONFIG.APP_NAME}`;
-      document.querySelectorAll('[data-fill]').forEach(el => {
-        switch (el.dataset.fill) {
-          case 'app-name':      el.textContent = CONFIG.APP_NAME; break;
-          case 'app-icon-name': el.textContent = `${CONFIG.APP_ICON} ${CONFIG.APP_NAME}`; break;
-          case 'email':         el.textContent = CONFIG.SUPPORT_EMAIL; break;
-        }
-      });
-    });
-
     function switchLang(lang) {
       document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
