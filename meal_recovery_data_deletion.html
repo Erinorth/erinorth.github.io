@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Deletion | MealRecovery - Meal Timing</title>
+  <style>
+    body{
+      font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      margin:24px;
+      line-height:1.6;
+      color:#111;
+      background:#f8f9fa;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:40px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .app-header{
+      text-align:center;
+      margin-bottom:28px;
+      padding-bottom:20px;
+      border-bottom:1px solid #e8eaed;
+    }
+    .app-name{
+      font-size:1.4em;
+      font-weight:700;
+      color:#1a73e8;
+      letter-spacing:0.5px;
+    }
+    .developer-name{
+      color:#777;
+      font-size:0.85em;
+      margin-top:6px;
+    }
+    .note{
+      color:#666;
+      font-size:0.9em;
+      margin-top:8px;
+      padding:12px;
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+    }
+    .muted{color:#4c4c4c}
+    h1{
+      color:#1a73e8;
+      border-bottom:2px solid #1a73e8;
+      padding-bottom:12px;
+    }
+    h2{
+      color:#333;
+      margin-top:32px;
+      border-left:4px solid #1a73e8;
+      padding-left:12px;
+    }
+    ol,ul{margin-left:20px}
+    li{margin-bottom:8px}
+    strong{color:#1a73e8}
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #ddd;
+    }
+    .lang-toggle{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .lang-btn{
+      display:inline-block;
+      padding:8px 20px;
+      margin:0 4px;
+      border:2px solid #1a73e8;
+      border-radius:20px;
+      color:#1a73e8;
+      cursor:pointer;
+      transition:all 0.3s;
+      font-weight:600;
+      background:white;
+    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
+    .lang-section{display:none}
+    .lang-section.active{display:block}
+    .email-highlight{
+      background:#fff3cd;
+      padding:2px 6px;
+      border-radius:3px;
+      font-weight:600;
+    }
+    @media (max-width:768px){
+      body{margin:12px}
+      .container{padding:24px 16px}
+      h1{font-size:1.6em}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="app-header">
+      <div class="app-name">MealRecovery - Meal Timing</div>
+      <div class="developer-name">Developer: Pasathorn Sassananun (พสธร ศาสนนันทน์)</div>
+    </div>
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('th')">ภาษาไทย</button>
+    </div>
+
+    <!-- English Version -->
+    <div id="en-section" class="lang-section active">
+      <header>
+        <h1>Data Deletion</h1>
+        <p class="muted">App: MealRecovery - Meal Timing</p>
+        <p class="muted">Instructions for deleting your meal data inside the app.</p>
+        <p class="muted">Last Updated: March 1, 2026</p>
+      </header>
+
+      <section>
+        <h2>Delete a single meal record</h2>
+        <ol>
+          <li>Open the <strong>MealRecovery</strong> app.</li>
+          <li>Navigate to the meal log or history screen.</li>
+          <li>Tap the meal entry you want to remove.</li>
+          <li>Tap the delete option and confirm.</li>
+        </ol>
+        <p class="note">This deletes only the selected meal record.</p>
+      </section>
+
+      <section>
+        <h2>Delete all data</h2>
+        <ol>
+          <li>Open the <strong>MealRecovery</strong> app.</li>
+          <li>Go to <strong>Settings</strong>.</li>
+          <li>Scroll to <strong>Data</strong>.</li>
+          <li>Tap <strong>Clear all data</strong> and confirm.</li>
+        </ol>
+        <p class="note">This removes all locally stored meal logs, timing records, and preferences from your device.</p>
+      </section>
+
+      <section>
+        <h2>Delete account and all server data</h2>
+        <p>To permanently delete your account and all associated data from our servers (meal history, eating window records, streak data), please follow the <a href="meal_recovery_account_deletion.html">account deletion instructions</a>.</p>
+      </section>
+
+      <section>
+        <h2>Guest mode note</h2>
+        <p>Guest mode has no account data on the server. All meal logs are stored locally only. Clearing data in the app removes all local meal records.</p>
+      </section>
+
+      <footer>
+        <p><strong>Developer:</strong> Pasathorn Sassananun (พสธร ศาสนนันทน์)</p>
+        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">This document provides general information and is not legal advice.</p>
+      </footer>
+    </div>
+
+    <!-- Thai Version -->
+    <div id="th-section" class="lang-section">
+      <header>
+        <h1>ลบข้อมูล</h1>
+        <p class="muted">แอป: MealRecovery - Meal Timing</p>
+        <p class="muted">คำแนะนำในการลบข้อมูลมื้ออาหารในแอป</p>
+        <p class="muted">อัพเดทล่าสุด: 1 มีนาคม 2569</p>
+      </header>
+
+      <section>
+        <h2>ลบบันทึกมื้ออาหารรายการเดียว</h2>
+        <ol>
+          <li>เปิดแอป <strong>MealRecovery</strong></li>
+          <li>ไปยังหน้าบันทึกมื้ออาหารหรือประวัติการรับประทาน</li>
+          <li>แตะรายการมื้ออาหารที่ต้องการลบ</li>
+          <li>แตะตัวเลือกลบและยืนยัน</li>
+        </ol>
+        <p class="note">การลบนี้จะลบเฉพาะรายการมื้ออาหารที่เลือกเท่านั้น</p>
+      </section>
+
+      <section>
+        <h2>ลบข้อมูลทั้งหมด</h2>
+        <ol>
+          <li>เปิดแอป <strong>MealRecovery</strong></li>
+          <li>ไปที่ <strong>การตั้งค่า</strong></li>
+          <li>เลื่อนไปที่ <strong>ข้อมูล</strong></li>
+          <li>แตะ <strong>ลบข้อมูลทั้งหมด</strong> และยืนยัน</li>
+        </ol>
+        <p class="note">การลบนี้จะลบบันทึกมื้ออาหาร ประวัติ Meal Timing และการตั้งค่าทั้งหมดที่เก็บอยู่ในเครื่องของคุณ</p>
+      </section>
+
+      <section>
+        <h2>ลบบัญชีและข้อมูลบนเซิร์ฟเวอร์ทั้งหมด</h2>
+        <p>หากต้องการลบบัญชีและข้อมูลทั้งหมดบนเซิร์ฟเวอร์อย่างถาวร (ประวัติมื้ออาหาร ข้อมูล Eating Window สตรีค) กรุณาดู <a href="meal_recovery_account_deletion.html">ขั้นตอนการลบบัญชี</a></p>
+      </section>
+
+      <section>
+        <h2>หมายเหตุสำหรับโหมดผู้เยี่ยมชม</h2>
+        <p>โหมดผู้เยี่ยมชมไม่มีข้อมูลบัญชีบนเซิร์ฟเวอร์ บันทึกมื้ออาหารทั้งหมดจัดเก็บไว้ในเครื่องเท่านั้น การลบข้อมูลในแอปจะลบบันทึกมื้ออาหารในเครื่องทั้งหมด</p>
+      </section>
+
+      <footer>
+        <p><strong>นักพัฒนา:</strong> Pasathorn Sassananun (พสธร ศาสนนันทน์)</p>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if (lang === 'en') {
+        document.getElementById('en-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      } else {
+        document.getElementById('th-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

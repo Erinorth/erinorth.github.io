@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Account Deletion | MealRecovery - Meal Timing</title>
+  <style>
+    body{
+      font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      margin:24px;
+      line-height:1.6;
+      color:#111;
+      background:#f8f9fa;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:40px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .app-header{
+      text-align:center;
+      margin-bottom:28px;
+      padding-bottom:20px;
+      border-bottom:1px solid #e8eaed;
+    }
+    .app-name{
+      font-size:1.4em;
+      font-weight:700;
+      color:#1a73e8;
+      letter-spacing:0.5px;
+    }
+    .developer-name{
+      color:#777;
+      font-size:0.85em;
+      margin-top:6px;
+    }
+    .note{
+      color:#666;
+      font-size:0.9em;
+      margin-top:8px;
+      padding:12px;
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+    }
+    .muted{color:#4c4c4c}
+    h1{
+      color:#1a73e8;
+      border-bottom:2px solid #1a73e8;
+      padding-bottom:12px;
+    }
+    h2{
+      color:#333;
+      margin-top:32px;
+      border-left:4px solid #1a73e8;
+      padding-left:12px;
+    }
+    ol,ul{margin-left:20px}
+    li{margin-bottom:8px}
+    strong{color:#1a73e8}
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #ddd;
+    }
+    .lang-toggle{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .lang-btn{
+      display:inline-block;
+      padding:8px 20px;
+      margin:0 4px;
+      border:2px solid #1a73e8;
+      border-radius:20px;
+      color:#1a73e8;
+      cursor:pointer;
+      transition:all 0.3s;
+      font-weight:600;
+      background:white;
+    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
+    .lang-section{display:none}
+    .lang-section.active{display:block}
+    .email-highlight{
+      background:#fff3cd;
+      padding:2px 6px;
+      border-radius:3px;
+      font-weight:600;
+    }
+    @media (max-width:768px){
+      body{margin:12px}
+      .container{padding:24px 16px}
+      h1{font-size:1.6em}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="app-header">
+      <div class="app-name">MealRecovery - Meal Timing</div>
+      <div class="developer-name">Developer: Pasathorn Sassananun (พสธร ศาสนนันทน์)</div>
+    </div>
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('th')">ภาษาไทย</button>
+    </div>
+
+    <!-- English Version -->
+    <div id="en-section" class="lang-section active">
+      <header>
+        <h1>Account Deletion</h1>
+        <p class="muted">App: MealRecovery - Meal Timing</p>
+        <p class="muted">Instructions for deleting your account inside the app.</p>
+        <p class="muted">Last Updated: March 1, 2026</p>
+      </header>
+
+      <section>
+        <h2>In-app account deletion steps</h2>
+        <ol>
+          <li>Open the <strong>MealRecovery</strong> app.</li>
+          <li>Tap the <strong>Account</strong> icon in the top-right corner.</li>
+          <li>On the <strong>Account</strong> screen, tap <strong>Request account deletion</strong>.</li>
+          <li>Your email app will open with a prefilled deletion request.</li>
+          <li>Send the email to <strong><span class="email-highlight">north.affhub@gmail.com</span></strong>.</li>
+        </ol>
+        <p class="note">If the email app cannot open, the support email will be copied so you can paste it manually.</p>
+        <p class="note">Guest mode has no account to delete. You can clear local data from the app settings.</p>
+      </section>
+
+      <section>
+        <h2>Data that will be deleted</h2>
+        <ul>
+          <li>User account and authentication records</li>
+          <li>All meal logs and eating timestamp records</li>
+          <li>Meal timing history and eating window data</li>
+          <li>Streak records and progress data</li>
+          <li>Entitlement and subscription data tied to your account</li>
+          <li>User preferences and health goal settings</li>
+        </ul>
+        <p class="note">Payment data is handled by the app stores (Google Play / App Store) under their own policies.</p>
+      </section>
+
+      <section>
+        <h2>Processing time</h2>
+        <p>After we receive your request, we verify your identity and delete data within <strong>30 days</strong>.</p>
+        <p class="note">You will receive a confirmation email once the deletion is complete.</p>
+      </section>
+
+      <section>
+        <h2>Important notes</h2>
+        <ul>
+          <li>Account deletion is <strong>permanent and cannot be undone</strong></li>
+          <li>All your meal logs and timing history will be permanently lost</li>
+          <li>Active subscriptions should be cancelled through your app store first</li>
+          <li>To use the app again, you must create a new account</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p><strong>Developer:</strong> Pasathorn Sassananun (พสธร ศาสนนันทน์)</p>
+        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">This document provides general information and is not legal advice.</p>
+      </footer>
+    </div>
+
+    <!-- Thai Version -->
+    <div id="th-section" class="lang-section">
+      <header>
+        <h1>ลบบัญชี</h1>
+        <p class="muted">แอป: MealRecovery - Meal Timing</p>
+        <p class="muted">คำแนะนำในการลบบัญชีของคุณในแอป</p>
+        <p class="muted">อัพเดทล่าสุด: 1 มีนาคม 2569</p>
+      </header>
+
+      <section>
+        <h2>ขั้นตอนการลบบัญชีในแอป</h2>
+        <ol>
+          <li>เปิดแอป <strong>MealRecovery</strong></li>
+          <li>แตะไอคอน <strong>Account</strong> (บัญชี) ที่มุมบนขวา</li>
+          <li>ในหน้า <strong>Account</strong> แตะ <strong>Request account deletion</strong> (ขอลบบัญชี)</li>
+          <li>แอปอีเมลจะเปิดขึ้นพร้อมข้อความคำขอลบบัญชีที่กรอกไว้แล้ว</li>
+          <li>ส่งอีเมลไปที่ <strong><span class="email-highlight">north.affhub@gmail.com</span></strong></li>
+        </ol>
+        <p class="note">หากแอปอีเมลไม่สามารถเปิดได้ อีเมลสนับสนุนจะถูกคัดลอกเพื่อให้คุณวางได้เอง</p>
+        <p class="note">โหมดผู้เยี่ยมชม (Guest mode) ไม่มีบัญชีให้ลบ คุณสามารถลบข้อมูลในเครื่องได้จากการตั้งค่าแอป</p>
+      </section>
+
+      <section>
+        <h2>ข้อมูลที่จะถูกลบ</h2>
+        <ul>
+          <li>บัญชีผู้ใช้และข้อมูลการยืนยันตัวตน</li>
+          <li>บันทึกมื้ออาหารและเวลารับประทานอาหารทั้งหมด</li>
+          <li>ประวัติ Meal Timing และข้อมูล Eating Window</li>
+          <li>สตรีคและข้อมูลความคืบหน้า</li>
+          <li>ข้อมูลสิทธิ์และ Subscription ที่เชื่อมโยงกับบัญชีของคุณ</li>
+          <li>การตั้งค่าและเป้าหมายสุขภาพส่วนบุคคล</li>
+        </ul>
+        <p class="note">ข้อมูลการชำระเงินจัดการโดย App Store (Google Play / App Store) ภายใต้นโยบายของพวกเขา</p>
+      </section>
+
+      <section>
+        <h2>ระยะเวลาดำเนินการ</h2>
+        <p>หลังจากที่เราได้รับคำขอของคุณ เราจะตรวจสอบตัวตนและลบข้อมูลภายใน <strong>30 วัน</strong></p>
+        <p class="note">คุณจะได้รับอีเมลยืนยันเมื่อการลบข้อมูลเสร็จสมบูรณ์</p>
+      </section>
+
+      <section>
+        <h2>ข้อควรทราบที่สำคัญ</h2>
+        <ul>
+          <li>การลบบัญชีเป็น<strong>การถาวรและไม่สามารถยกเลิกได้</strong></li>
+          <li>บันทึกมื้ออาหารและประวัติ Meal Timing ทั้งหมดจะหายไปอย่างถาวร</li>
+          <li>ควรยกเลิก Subscription ที่ทำงานอยู่ผ่าน App Store ก่อน</li>
+          <li>หากต้องการใช้งานแอปอีกครั้ง คุณต้องสร้างบัญชีใหม่</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p><strong>นักพัฒนา:</strong> Pasathorn Sassananun (พสธร ศาสนนันทน์)</p>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if (lang === 'en') {
+        document.getElementById('en-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      } else {
+        document.getElementById('th-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
