@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Deletion TapeLog | ลบข้อมูล TapeLog</title>
+  <style>
+    body{
+      font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      margin:24px;
+      line-height:1.6;
+      color:#111;
+      background:#f8f9fa;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:40px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .note{
+      color:#666;
+      font-size:0.9em;
+      margin-top:8px;
+      padding:12px;
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+    }
+    .muted{color:#4c4c4c}
+    h1{
+      color:#1a73e8;
+      border-bottom:2px solid #1a73e8;
+      padding-bottom:12px;
+    }
+    h2{
+      color:#333;
+      margin-top:32px;
+      border-left:4px solid #1a73e8;
+      padding-left:12px;
+    }
+    ol,ul{margin-left:20px}
+    li{margin-bottom:8px}
+    strong{color:#1a73e8}
+    a{color:#1a73e8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #ddd;
+    }
+    .lang-toggle{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .lang-btn{
+      display:inline-block;
+      padding:8px 20px;
+      margin:0 4px;
+      border:2px solid #1a73e8;
+      border-radius:20px;
+      color:#1a73e8;
+      cursor:pointer;
+      transition:all 0.3s;
+      font-weight:600;
+      background:white;
+    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
+    .lang-section{display:none}
+    .lang-section.active{display:block}
+    .email-highlight{
+      background:#fff3cd;
+      padding:2px 6px;
+      border-radius:3px;
+      font-weight:600;
+    }
+    .form-divider{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin:40px 0 32px;
+      color:#999;
+      font-size:0.9em;
+      font-weight:600;
+      letter-spacing:1px;
+    }
+    .form-divider::before,.form-divider::after{
+      content:'';
+      flex:1;
+      height:1px;
+      background:#ddd;
+    }
+    .request-form{
+      background:#f8faff;
+      border:1px solid #d0dff8;
+      border-radius:10px;
+      padding:32px;
+      margin-top:8px;
+    }
+    .request-form h2{
+      margin-top:0;
+      border-left:4px solid #f57c00;
+      color:#e65100;
+    }
+    .form-group{margin-bottom:20px}
+    .form-group label{
+      display:block;
+      font-weight:600;
+      margin-bottom:6px;
+      color:#333;
+      font-size:0.95em;
+    }
+    .form-group label .req{color:#e53935;margin-left:2px}
+    .form-control{
+      width:100%;
+      padding:10px 14px;
+      border:1.5px solid #ccc;
+      border-radius:6px;
+      font-size:1em;
+      font-family:inherit;
+      color:#111;
+      background:white;
+      box-sizing:border-box;
+      transition:border-color 0.2s;
+    }
+    .form-control:focus{
+      outline:none;
+      border-color:#1a73e8;
+      box-shadow:0 0 0 3px rgba(26,115,232,0.12);
+    }
+    textarea.form-control{resize:vertical;min-height:90px}
+    .checkbox-group{
+      background:#fff8e1;
+      border:1.5px solid #ffe082;
+      border-radius:6px;
+      padding:14px 16px;
+    }
+    .checkbox-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:6px 0;
+    }
+    .checkbox-item:not(:last-child){border-bottom:1px solid #fff3cd}
+    .checkbox-item input[type=checkbox]{
+      width:17px;
+      height:17px;
+      flex-shrink:0;
+      accent-color:#f57c00;
+      cursor:pointer;
+    }
+    .checkbox-item label{
+      color:#444;
+      font-size:0.92em;
+      cursor:pointer;
+      margin:0;
+      font-weight:400;
+    }
+    .btn-submit{
+      width:100%;
+      padding:14px;
+      background:#f57c00;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:1em;
+      font-weight:700;
+      font-family:inherit;
+      cursor:pointer;
+      transition:background 0.2s, opacity 0.2s;
+      margin-top:16px;
+    }
+    .btn-submit:hover:not(:disabled){background:#e65100}
+    .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
+    .form-status{
+      display:none;
+      padding:16px 20px;
+      border-radius:8px;
+      margin-top:20px;
+      font-weight:600;
+    }
+    .form-status.success{
+      display:block;
+      background:#e8f5e9;
+      border:1.5px solid #a5d6a7;
+      color:#2e7d32;
+    }
+    .form-status.error{
+      display:block;
+      background:#ffebee;
+      border:1.5px solid #ef9a9a;
+      color:#c62828;
+    }
+    @media (max-width:768px){
+      body{margin:12px}
+      .container{padding:24px 16px}
+      h1{font-size:1.6em}
+      .request-form{padding:20px 16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('th')">ภาษาไทย</button>
+    </div>
+
+    <!-- ===== English Version ===== -->
+    <div id="en-section" class="lang-section active">
+      <header>
+        <h1>Data Deletion — TapeLog</h1>
+        <p class="muted">Instructions for deleting data inside the TapeLog app.</p>
+        <p class="muted">Last Updated: April 27, 2026</p>
+      </header>
+
+      <section>
+        <h2>Delete a single measurement record</h2>
+        <ol>
+          <li>Open the <strong>TapeLog</strong> app.</li>
+          <li>Go to the <strong>Log &amp; Progress</strong> tab.</li>
+          <li>Select the body part whose history you want to edit.</li>
+          <li>Tap the delete icon next to the measurement you want to remove.</li>
+        </ol>
+        <p class="note">This deletes only the selected measurement record.</p>
+      </section>
+
+      <section>
+        <h2>Delete all data (account deletion)</h2>
+        <ol>
+          <li>Open the <strong>TapeLog</strong> app.</li>
+          <li>Tap the <strong>Account</strong> icon in the top-right corner.</li>
+          <li>Tap <strong>Request account deletion</strong> and follow the steps.</li>
+        </ol>
+        <p class="note">Deleting your account removes all body measurement history and associated data permanently.</p>
+      </section>
+
+      <section>
+        <h2>Guest mode note</h2>
+        <p>Guest mode has no account data on the server. Clearing data in the app removes local data only.</p>
+      </section>
+
+      <div class="form-divider">OR SUBMIT A REQUEST BELOW</div>
+
+      <div class="request-form">
+        <h2>Submit data deletion request</h2>
+        <p class="muted" style="margin-top:0;margin-bottom:20px">Can't access the app? Submit a request here and we will handle the deletion within 30 days.</p>
+
+        <form id="en-data-form" novalidate>
+          <div class="form-group">
+            <label for="en-dat-name">Full name <span class="req">*</span></label>
+            <input id="en-dat-name" name="name" type="text" class="form-control" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="en-dat-email">Registered email address <span class="req">*</span></label>
+            <input id="en-dat-email" name="email" type="email" class="form-control" placeholder="email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Data to delete <span class="req">*</span></label>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input id="en-d1" name="del_measurements" type="checkbox" value="Body measurement logs and records" />
+                <label for="en-d1">Body measurement logs and records</label>
+              </div>
+              <div class="checkbox-item">
+                <input id="en-d2" name="del_preferences" type="checkbox" value="User preferences and settings" />
+                <label for="en-d2">User preferences and settings</label>
+              </div>
+              <div class="checkbox-item">
+                <input id="en-d3" name="del_subscription" type="checkbox" value="Subscription and entitlement data" />
+                <label for="en-d3">Subscription and entitlement data</label>
+              </div>
+              <div class="checkbox-item">
+                <input id="en-d4" name="del_all" type="checkbox" value="All data" />
+                <label for="en-d4"><strong>All data</strong> (includes everything above)</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="en-dat-desc">Additional details <span style="font-weight:400;color:#888">(optional)</span></label>
+            <textarea id="en-dat-desc" name="details" class="form-control" placeholder="Describe what specific data you want deleted..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="en-dat-btn">Submit data deletion request</button>
+        </form>
+        <div id="en-dat-success" class="form-status success">
+          Your data deletion request has been received. We will process it within 30 days and send a confirmation to your email.
+        </div>
+        <div id="en-dat-error" class="form-status error">
+          Something went wrong. Please try again or email us directly at <span class="email-highlight">north.affhub@gmail.com</span>.
+        </div>
+      </div>
+
+      <footer>
+        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">This document provides general information and is not legal advice.</p>
+      </footer>
+    </div>
+
+    <!-- ===== Thai Version ===== -->
+    <div id="th-section" class="lang-section">
+      <header>
+        <h1>ลบข้อมูล TapeLog</h1>
+        <p class="muted">คำแนะนำในการลบข้อมูลในแอป TapeLog</p>
+        <p class="muted">อัพเดทล่าสุด: 27 เมษายน 2569</p>
+      </header>
+
+      <section>
+        <h2>ลบรายการวัดเดียว</h2>
+        <ol>
+          <li>เปิดแอป <strong>TapeLog</strong></li>
+          <li>ไปที่แท็บ <strong>บันทึกและความก้าวหน้า</strong></li>
+          <li>เลือกส่วนร่างกายที่ต้องการแก้ไขประวัติ</li>
+          <li>แตะไอคอนลบข้างรายการวัดที่ต้องการลบ</li>
+        </ol>
+        <p class="note">การลบนี้จะลบเฉพาะรายการวัดที่เลือกเท่านั้น</p>
+      </section>
+
+      <section>
+        <h2>ลบข้อมูลทั้งหมด (ลบบัญชี)</h2>
+        <ol>
+          <li>เปิดแอป <strong>TapeLog</strong></li>
+          <li>แตะไอคอน <strong>Account</strong> ที่มุมบนขวา</li>
+          <li>แตะ <strong>Request account deletion</strong> แล้วทำตามขั้นตอน</li>
+        </ol>
+        <p class="note">การลบบัญชีจะลบประวัติการวัดร่างกายทั้งหมดและข้อมูลที่เกี่ยวข้องอย่างถาวร</p>
+      </section>
+
+      <section>
+        <h2>หมายเหตุสำหรับโหมดผู้เยี่ยมชม</h2>
+        <p>โหมดผู้เยี่ยมชมไม่มีข้อมูลบัญชีบนเซิร์ฟเวอร์ การลบข้อมูลในแอปจะลบเฉพาะข้อมูลในเครื่องเท่านั้น</p>
+      </section>
+
+      <div class="form-divider">หรือส่งคำขอผ่านฟอร์มด้านล่าง</div>
+
+      <div class="request-form">
+        <h2>ส่งคำขอลบข้อมูล</h2>
+        <p class="muted" style="margin-top:0;margin-bottom:20px">ไม่สามารถเข้าถึงแอปได้? ส่งคำขอที่นี่ เราจะดำเนินการภายใน 30 วัน</p>
+
+        <form id="th-data-form" novalidate>
+          <div class="form-group">
+            <label for="th-dat-name">ชื่อ-นามสกุล <span class="req">*</span></label>
+            <input id="th-dat-name" name="name" type="text" class="form-control" placeholder="ชื่อของคุณ" required />
+          </div>
+          <div class="form-group">
+            <label for="th-dat-email">อีเมลที่ลงทะเบียนในแอป <span class="req">*</span></label>
+            <input id="th-dat-email" name="email" type="email" class="form-control" placeholder="email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>ข้อมูลที่ต้องการลบ <span class="req">*</span></label>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input id="th-d1" name="del_measurements" type="checkbox" value="บันทึกการวัดร่างกาย" />
+                <label for="th-d1">บันทึกการวัดร่างกาย</label>
+              </div>
+              <div class="checkbox-item">
+                <input id="th-d2" name="del_preferences" type="checkbox" value="การตั้งค่าและความชอบส่วนบุคคล" />
+                <label for="th-d2">การตั้งค่าและความชอบส่วนบุคคล</label>
+              </div>
+              <div class="checkbox-item">
+                <input id="th-d3" name="del_subscription" type="checkbox" value="ข้อมูลสิทธิ์และ Subscription" />
+                <label for="th-d3">ข้อมูลสิทธิ์และ Subscription</label>
+              </div>
+              <div class="checkbox-item">
+                <input id="th-d4" name="del_all" type="checkbox" value="ข้อมูลทั้งหมด" />
+                <label for="th-d4"><strong>ข้อมูลทั้งหมด</strong> (รวมทุกรายการข้างต้น)</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="th-dat-desc">รายละเอียดเพิ่มเติม <span style="font-weight:400;color:#888">(ไม่บังคับ)</span></label>
+            <textarea id="th-dat-desc" name="details" class="form-control" placeholder="อธิบายข้อมูลที่ต้องการให้ลบโดยเฉพาะ..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="th-dat-btn">ส่งคำขอลบข้อมูล</button>
+        </form>
+        <div id="th-dat-success" class="form-status success">
+          ได้รับคำขอลบข้อมูลของคุณแล้ว เราจะดำเนินการภายใน 30 วัน และส่งอีเมลยืนยันให้คุณ
+        </div>
+        <div id="th-dat-error" class="form-status error">
+          เกิดข้อผิดพลาด กรุณาลองอีกครั้ง หรือส่งอีเมลโดยตรงที่ <span class="email-highlight">north.affhub@gmail.com</span>
+        </div>
+      </div>
+
+      <footer>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if (lang === 'en') {
+        document.getElementById('en-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      } else {
+        document.getElementById('th-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      }
+    }
+
+    function submitDataForm(formId, btnId, successId, errorId, lang) {
+      const form = document.getElementById(formId);
+      const btn = document.getElementById(btnId);
+      const successEl = document.getElementById(successId);
+      const errorEl = document.getElementById(errorId);
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+
+        const name = form.querySelector('[name=name]').value.trim();
+        const email = form.querySelector('[name=email]').value.trim();
+        const checked = [...form.querySelectorAll('input[type=checkbox]:checked')];
+
+        if (!name || !email) {
+          errorEl.textContent = lang === 'th'
+            ? 'กรุณากรอกชื่อและอีเมล'
+            : 'Please fill in your name and email.';
+          errorEl.style.display = 'block';
+          return;
+        }
+        if (checked.length === 0) {
+          errorEl.textContent = lang === 'th'
+            ? 'กรุณาเลือกข้อมูลที่ต้องการลบอย่างน้อย 1 รายการ'
+            : 'Please select at least one type of data to delete.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = lang === 'th' ? 'กำลังส่ง...' : 'Submitting...';
+
+        const selectedData = checked.map(cb => cb.value).join(', ');
+        const payload = {
+          _subject: '[TapeLog] Data Deletion Request',
+          app: 'TapeLog',
+          request_type: 'Data Deletion',
+          name,
+          email,
+          data_to_delete: selectedData,
+          details: form.querySelector('[name=details]').value.trim() || '(not provided)',
+          language: lang === 'th' ? 'Thai' : 'English'
+        };
+
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/north.affhub@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          if (data.success === 'true' || data.success === true) {
+            form.style.display = 'none';
+            successEl.style.display = 'block';
+          } else {
+            throw new Error('server error');
+          }
+        } catch {
+          btn.disabled = false;
+          btn.textContent = lang === 'th' ? 'ส่งคำขอลบข้อมูล' : 'Submit data deletion request';
+          errorEl.style.display = 'block';
+        }
+      });
+    }
+
+    submitDataForm('en-data-form', 'en-dat-btn', 'en-dat-success', 'en-dat-error', 'en');
+    submitDataForm('th-data-form', 'th-dat-btn', 'th-dat-success', 'th-dat-error', 'th');
+  </script>
+</body>
+</html>
