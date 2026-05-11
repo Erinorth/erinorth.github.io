@@ -26,6 +26,7 @@ Known apps at the time of writing (not exhaustive):
 | MealRecovery | `meal_recovery_` |
 | WishPause | `wishpause_` |
 | PetSym | `petsym_` |
+| JointCast | `jointcast_` |
 
 When adding a new app, **update this table** with the new app name and file prefix.
 

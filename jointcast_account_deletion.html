@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Account Deletion — JointCast | ลบบัญชี JointCast</title>
+  <style>
+    body{
+      font-family:'Sarabun',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      margin:24px;
+      line-height:1.6;
+      color:#111;
+      background:#f8f9fa;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:40px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .note{
+      color:#666;
+      font-size:0.9em;
+      margin-top:8px;
+      padding:12px;
+      background:#f0f4ff;
+      border-left:3px solid #4285f4;
+      border-radius:4px;
+    }
+    .muted{color:#4c4c4c}
+    h1{
+      color:#1a73e8;
+      border-bottom:2px solid #1a73e8;
+      padding-bottom:12px;
+    }
+    h2{
+      color:#333;
+      margin-top:32px;
+      border-left:4px solid #1a73e8;
+      padding-left:12px;
+    }
+    ol,ul{margin-left:20px}
+    li{margin-bottom:8px}
+    strong{color:#1a73e8}
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #ddd;
+    }
+    .lang-toggle{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .lang-btn{
+      display:inline-block;
+      padding:8px 20px;
+      margin:0 4px;
+      border:2px solid #1a73e8;
+      border-radius:20px;
+      color:#1a73e8;
+      cursor:pointer;
+      transition:all 0.3s;
+      font-weight:600;
+      background:white;
+    }
+    .lang-btn:hover{background:#e8f0fe}
+    .lang-btn.active{background:#1a73e8;color:white}
+    .lang-section{display:none}
+    .lang-section.active{display:block}
+    .email-highlight{
+      background:#fff3cd;
+      padding:2px 6px;
+      border-radius:3px;
+      font-weight:600;
+    }
+
+    /* ---- Form styles ---- */
+    .form-divider{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin:40px 0 32px;
+      color:#999;
+      font-size:0.9em;
+      font-weight:600;
+      letter-spacing:1px;
+    }
+    .form-divider::before,.form-divider::after{
+      content:'';
+      flex:1;
+      height:1px;
+      background:#ddd;
+    }
+    .request-form{
+      background:#f8faff;
+      border:1px solid #d0dff8;
+      border-radius:10px;
+      padding:32px;
+      margin-top:8px;
+    }
+    .request-form h2{
+      margin-top:0;
+      border-left:4px solid #e53935;
+      color:#c62828;
+    }
+    .form-group{
+      margin-bottom:20px;
+    }
+    .form-group label{
+      display:block;
+      font-weight:600;
+      margin-bottom:6px;
+      color:#333;
+      font-size:0.95em;
+    }
+    .form-group label .req{color:#e53935;margin-left:2px}
+    .form-control{
+      width:100%;
+      padding:10px 14px;
+      border:1.5px solid #ccc;
+      border-radius:6px;
+      font-size:1em;
+      font-family:inherit;
+      color:#111;
+      background:white;
+      box-sizing:border-box;
+      transition:border-color 0.2s;
+    }
+    .form-control:focus{
+      outline:none;
+      border-color:#1a73e8;
+      box-shadow:0 0 0 3px rgba(26,115,232,0.12);
+    }
+    textarea.form-control{resize:vertical;min-height:90px}
+    .form-check{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      background:#fff3f3;
+      border:1.5px solid #ffcdd2;
+      border-radius:6px;
+      padding:14px;
+      margin-top:8px;
+    }
+    .form-check input[type=checkbox]{
+      width:18px;
+      height:18px;
+      margin-top:2px;
+      flex-shrink:0;
+      accent-color:#e53935;
+      cursor:pointer;
+    }
+    .form-check label{
+      color:#555;
+      font-size:0.9em;
+      cursor:pointer;
+      line-height:1.5;
+    }
+    .btn-submit{
+      width:100%;
+      padding:14px;
+      background:#e53935;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:1em;
+      font-weight:700;
+      font-family:inherit;
+      cursor:pointer;
+      transition:background 0.2s, opacity 0.2s;
+      margin-top:8px;
+    }
+    .btn-submit:hover:not(:disabled){background:#c62828}
+    .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
+    .form-status{
+      display:none;
+      padding:16px 20px;
+      border-radius:8px;
+      margin-top:20px;
+      font-weight:600;
+    }
+    .form-status.success{
+      display:block;
+      background:#e8f5e9;
+      border:1.5px solid #a5d6a7;
+      color:#2e7d32;
+    }
+    .form-status.error{
+      display:block;
+      background:#ffebee;
+      border:1.5px solid #ef9a9a;
+      color:#c62828;
+    }
+
+    @media (max-width:768px){
+      body{margin:12px}
+      .container{padding:24px 16px}
+      h1{font-size:1.6em}
+      .request-form{padding:20px 16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('th')">ภาษาไทย</button>
+    </div>
+
+    <!-- ===== English Version ===== -->
+    <div id="en-section" class="lang-section active">
+      <header>
+        <h1>Account Deletion — JointCast</h1>
+        <p class="muted">Instructions for deleting your JointCast account.</p>
+        <p class="muted">Last Updated: May 11, 2026</p>
+      </header>
+
+      <section>
+        <h2>Delete your account directly in the app</h2>
+        <ol>
+          <li>Open <strong>JointCast</strong>.</li>
+          <li>Tap the <strong>Account</strong> icon (top-right corner).</li>
+          <li>On the <strong>Account</strong> screen, tap <strong>Delete Account</strong>.</li>
+          <li>Read the warning and tap <strong>Delete Account</strong> to confirm.</li>
+        </ol>
+        <p class="note">This is the fastest method — deletion is immediate and triggers server-side removal within 30 days.</p>
+        <p class="note">Guest mode has no account to delete. You can clear local data from Settings inside the app.</p>
+      </section>
+
+      <section>
+        <h2>Data that will be deleted</h2>
+        <ul>
+          <li>User account and authentication records</li>
+          <li>All daily pain log entries (pain scores, notes)</li>
+          <li>Barometric pressure readings stored with your logs</li>
+          <li>Entitlement and subscription data tied to your account</li>
+          <li>User preferences and settings</li>
+        </ul>
+        <p class="note">Payment data is handled by Google Play / Apple App Store under their own policies. Cancel any active subscriptions through your app store before deleting your account.</p>
+      </section>
+
+      <section>
+        <h2>Processing time</h2>
+        <p>After deletion is initiated, all data is permanently removed within <strong>30 days</strong>. You will receive a confirmation email once complete.</p>
+      </section>
+
+      <section>
+        <h2>Important notes</h2>
+        <ul>
+          <li>Account deletion is <strong>permanent and cannot be undone</strong></li>
+          <li>All pain logs and health data will be permanently erased</li>
+          <li>Cancel active subscriptions through your app store first</li>
+          <li>To use JointCast again, you must create a new account</li>
+        </ul>
+      </section>
+
+      <!-- Form -->
+      <div class="form-divider">OR SUBMIT A REQUEST BELOW</div>
+
+      <div class="request-form">
+        <h2>Submit account deletion request</h2>
+        <p class="muted" style="margin-top:0;margin-bottom:20px">Can't access the app? Fill in this form and we will process your request within 30 days.</p>
+
+        <form id="en-account-form" novalidate>
+          <div class="form-group">
+            <label for="en-acc-name">Full name <span class="req">*</span></label>
+            <input id="en-acc-name" name="name" type="text" class="form-control" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="en-acc-email">Registered email address <span class="req">*</span></label>
+            <input id="en-acc-email" name="email" type="email" class="form-control" placeholder="email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="en-acc-uid">User ID <span style="font-weight:400;color:#888">(optional — helps us locate your account faster)</span></label>
+            <input id="en-acc-uid" name="user_id" type="text" class="form-control" placeholder="Found in app: Account > User ID" />
+          </div>
+          <div class="form-group">
+            <label for="en-acc-reason">Reason for deletion <span style="font-weight:400;color:#888">(optional)</span></label>
+            <textarea id="en-acc-reason" name="reason" class="form-control" placeholder="Let us know why you're leaving..."></textarea>
+          </div>
+          <div class="form-check">
+            <input id="en-acc-confirm" name="confirmed" type="checkbox" required />
+            <label for="en-acc-confirm">
+              I understand that account deletion is <strong>permanent and cannot be undone</strong>.
+              All my pain logs, health data, and account information will be deleted forever.
+            </label>
+          </div>
+          <button type="submit" class="btn-submit" id="en-acc-btn" style="margin-top:20px">Submit deletion request</button>
+        </form>
+        <div id="en-acc-success" class="form-status success">
+          Your request has been received. We will verify your identity and delete your account within 30 days. A confirmation email will be sent to you.
+        </div>
+        <div id="en-acc-error" class="form-status error">
+          Something went wrong. Please try again or email us directly at <span class="email-highlight">north.affhub@gmail.com</span>.
+        </div>
+      </div>
+
+      <footer>
+        <p><strong>Contact:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">This document provides general information and is not legal advice.</p>
+      </footer>
+    </div>
+
+    <!-- ===== Thai Version ===== -->
+    <div id="th-section" class="lang-section">
+      <header>
+        <h1>ลบบัญชี — JointCast</h1>
+        <p class="muted">คำแนะนำในการลบบัญชี JointCast ของคุณ</p>
+        <p class="muted">อัพเดทล่าสุด: 11 พฤษภาคม 2569</p>
+      </header>
+
+      <section>
+        <h2>ลบบัญชีโดยตรงในแอป</h2>
+        <ol>
+          <li>เปิดแอป <strong>JointCast</strong></li>
+          <li>แตะไอคอน <strong>Account</strong> (บัญชี) ที่มุมบนขวา</li>
+          <li>ในหน้า <strong>Account</strong> แตะ <strong>Delete Account</strong> (ลบบัญชี)</li>
+          <li>อ่านคำเตือนและแตะ <strong>Delete Account</strong> เพื่อยืนยัน</li>
+        </ol>
+        <p class="note">นี่คือวิธีที่เร็วที่สุด — การลบจะเริ่มทันทีและข้อมูลบนเซิร์ฟเวอร์จะถูกลบภายใน 30 วัน</p>
+        <p class="note">โหมดผู้เยี่ยมชม (Guest mode) ไม่มีบัญชีให้ลบ คุณสามารถลบข้อมูลในเครื่องได้จากการตั้งค่าในแอป</p>
+      </section>
+
+      <section>
+        <h2>ข้อมูลที่จะถูกลบ</h2>
+        <ul>
+          <li>บัญชีผู้ใช้และข้อมูลการยืนยันตัวตน</li>
+          <li>บันทึกระดับความปวดประจำวันทั้งหมด (คะแนนความปวดและบันทึกย่อ)</li>
+          <li>ข้อมูลความดันบรรยากาศที่บันทึกไว้พร้อมบันทึกความปวด</li>
+          <li>ข้อมูลสิทธิ์และ Subscription ที่เชื่อมโยงกับบัญชีของคุณ</li>
+          <li>การตั้งค่าและความชอบส่วนบุคคล</li>
+        </ul>
+        <p class="note">ข้อมูลการชำระเงินจัดการโดย Google Play / App Store ภายใต้นโยบายของพวกเขา กรุณายกเลิก Subscription ที่ทำงานอยู่ผ่าน App Store ก่อนลบบัญชี</p>
+      </section>
+
+      <section>
+        <h2>ระยะเวลาดำเนินการ</h2>
+        <p>หลังจากเริ่มการลบ ข้อมูลทั้งหมดจะถูกลบอย่างถาวรภายใน <strong>30 วัน</strong> คุณจะได้รับอีเมลยืนยันเมื่อดำเนินการเสร็จสิ้น</p>
+      </section>
+
+      <section>
+        <h2>ข้อควรทราบที่สำคัญ</h2>
+        <ul>
+          <li>การลบบัญชีเป็น<strong>การถาวรและไม่สามารถยกเลิกได้</strong></li>
+          <li>บันทึกความปวดและข้อมูลสุขภาพทั้งหมดจะถูกลบอย่างถาวร</li>
+          <li>ควรยกเลิก Subscription ที่ทำงานอยู่ผ่าน App Store ก่อน</li>
+          <li>หากต้องการใช้งาน JointCast อีกครั้ง คุณต้องสร้างบัญชีใหม่</li>
+        </ul>
+      </section>
+
+      <!-- Form -->
+      <div class="form-divider">หรือส่งคำขอผ่านฟอร์มด้านล่าง</div>
+
+      <div class="request-form">
+        <h2>ส่งคำขอลบบัญชี</h2>
+        <p class="muted" style="margin-top:0;margin-bottom:20px">ไม่สามารถเข้าถึงแอปได้? กรอกฟอร์มด้านล่าง เราจะดำเนินการภายใน 30 วัน</p>
+
+        <form id="th-account-form" novalidate>
+          <div class="form-group">
+            <label for="th-acc-name">ชื่อ-นามสกุล <span class="req">*</span></label>
+            <input id="th-acc-name" name="name" type="text" class="form-control" placeholder="ชื่อของคุณ" required />
+          </div>
+          <div class="form-group">
+            <label for="th-acc-email">อีเมลที่ลงทะเบียนในแอป <span class="req">*</span></label>
+            <input id="th-acc-email" name="email" type="email" class="form-control" placeholder="email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="th-acc-uid">User ID <span style="font-weight:400;color:#888">(ไม่บังคับ — ช่วยให้เราค้นหาบัญชีได้เร็วขึ้น)</span></label>
+            <input id="th-acc-uid" name="user_id" type="text" class="form-control" placeholder="ดูได้ที่แอป: Account > User ID" />
+          </div>
+          <div class="form-group">
+            <label for="th-acc-reason">เหตุผลในการลบบัญชี <span style="font-weight:400;color:#888">(ไม่บังคับ)</span></label>
+            <textarea id="th-acc-reason" name="reason" class="form-control" placeholder="บอกเราเหตุผลที่คุณต้องการลบบัญชี..."></textarea>
+          </div>
+          <div class="form-check">
+            <input id="th-acc-confirm" name="confirmed" type="checkbox" required />
+            <label for="th-acc-confirm">
+              ฉันเข้าใจว่าการลบบัญชีเป็น<strong>การถาวรและไม่สามารถยกเลิกได้</strong>
+              บันทึกความปวด ข้อมูลสุขภาพ และข้อมูลบัญชีทั้งหมดจะถูกลบอย่างถาวร
+            </label>
+          </div>
+          <button type="submit" class="btn-submit" id="th-acc-btn" style="margin-top:20px">ส่งคำขอลบบัญชี</button>
+        </form>
+        <div id="th-acc-success" class="form-status success">
+          ได้รับคำขอของคุณแล้ว เราจะตรวจสอบตัวตนและลบบัญชีของคุณภายใน 30 วัน และจะส่งอีเมลยืนยันให้คุณเมื่อดำเนินการเสร็จสิ้น
+        </div>
+        <div id="th-acc-error" class="form-status error">
+          เกิดข้อผิดพลาด กรุณาลองอีกครั้ง หรือส่งอีเมลโดยตรงที่ <span class="email-highlight">north.affhub@gmail.com</span>
+        </div>
+      </div>
+
+      <footer>
+        <p><strong>ติดต่อ:</strong> <span class="email-highlight">north.affhub@gmail.com</span></p>
+        <p class="note">เอกสารนี้ให้ข้อมูลทั่วไปและไม่ใช่คำแนะนำทางกฎหมาย</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if (lang === 'en') {
+        document.getElementById('en-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      } else {
+        document.getElementById('th-section').classList.add('active');
+        document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      }
+    }
+
+    function submitAccountForm(formId, btnId, successId, errorId, lang) {
+      const form = document.getElementById(formId);
+      const btn = document.getElementById(btnId);
+      const successEl = document.getElementById(successId);
+      const errorEl = document.getElementById(errorId);
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+
+        const name = form.querySelector('[name=name]').value.trim();
+        const email = form.querySelector('[name=email]').value.trim();
+        const confirmed = form.querySelector('[name=confirmed]').checked;
+
+        if (!name || !email) {
+          errorEl.textContent = lang === 'th'
+            ? 'กรุณากรอกชื่อและอีเมล'
+            : 'Please fill in your name and email.';
+          errorEl.style.display = 'block';
+          return;
+        }
+        if (!confirmed) {
+          errorEl.textContent = lang === 'th'
+            ? 'กรุณายืนยันว่าคุณเข้าใจว่าการลบบัญชีเป็นการถาวร'
+            : 'Please confirm that you understand account deletion is permanent.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = lang === 'th' ? 'กำลังส่ง...' : 'Submitting...';
+
+        const payload = {
+          _subject: '[JointCast] Account Deletion Request',
+          request_type: 'Account Deletion',
+          app: 'JointCast',
+          name,
+          email,
+          user_id: form.querySelector('[name=user_id]').value.trim() || '(not provided)',
+          reason: form.querySelector('[name=reason]').value.trim() || '(not provided)',
+          confirmed: 'Yes — user confirmed permanent deletion',
+          language: lang === 'th' ? 'Thai' : 'English'
+        };
+
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/north.affhub@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          if (data.success === 'true' || data.success === true) {
+            form.style.display = 'none';
+            successEl.style.display = 'block';
+          } else {
+            throw new Error('server error');
+          }
+        } catch {
+          btn.disabled = false;
+          btn.textContent = lang === 'th' ? 'ส่งคำขอลบบัญชี' : 'Submit deletion request';
+          errorEl.style.display = 'block';
+        }
+      });
+    }
+
+    submitAccountForm('en-account-form', 'en-acc-btn', 'en-acc-success', 'en-acc-error', 'en');
+    submitAccountForm('th-account-form', 'th-acc-btn', 'th-acc-success', 'th-acc-error', 'th');
+  </script>
+</body>
+</html>
