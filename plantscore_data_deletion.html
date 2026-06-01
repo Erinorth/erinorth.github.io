@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion PlantScore | ลบข้อมูล PlantScore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .lang-toggle {
+            display: flex;
+            gap: 10px;
+        }
+        button.lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        button.lang-btn.active {
+            background: #f39c12;
+            color: white;
+            border-color: #f39c12;
+        }
+        button.lang-btn:hover {
+            border-color: #f39c12;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        .warning-box {
+            background: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            margin: 20px 0;
+        }
+        .warning-box p {
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        .contact-box {
+            background: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        .contact-box p {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        form {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        input[type="email"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #f39c12;
+            box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background: #f39c12;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background: #e67e22;
+        }
+        .submit-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+        .date {
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 id="page-title">Data Deletion PlantScore</h1>
+            </div>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('th')">ไทย</button>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div id="en-section" class="content active">
+            <h2>Delete Your Data</h2>
+            <p>If you wish to delete all your plant logs and weekly score history while keeping your account, please fill out the form below. We will process your request within 30 days.</p>
+
+            <div class="warning-box">
+                <p><strong>⚠️ Note: This action cannot be undone</strong></p>
+                <p>Deleting your data will remove:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>All plant log entries</li>
+                    <li>Your weekly score history</li>
+                </ul>
+                <p style="margin-top: 10px; color: #27ae60;"><strong>Your account will remain active and you can continue using PlantScore.</strong></p>
+            </div>
+
+            <div class="contact-box">
+                <p><strong>Alternative: Contact Us Directly</strong></p>
+                <p>You can also email your deletion request directly to:</p>
+                <p><strong>north.affhub@gmail.com</strong></p>
+                <p>Please include your email address in the subject line "[PlantScore] Data Deletion Request"</p>
+            </div>
+
+            <form action="https://formsubmit.co/north.affhub@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="[PlantScore] Data Deletion Request">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="request_type" value="Data Deletion">
+
+                <div class="form-group">
+                    <label for="email-en">Email Address *</label>
+                    <input type="email" id="email-en" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason-en">Reason for Deletion (optional)</label>
+                    <textarea id="reason-en" name="reason" placeholder="Tell us why you want to delete your data (optional)"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirm-en" required>
+                    <label for="confirm-en" style="margin-bottom: 0;">I understand that all my plant logs and score history will be permanently deleted</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Data Deletion Request</button>
+            </form>
+
+            <p class="date">Effective Date: May 26, 2026</p>
+        </div>
+
+        <!-- Thai Version -->
+        <div id="th-section" class="content">
+            <h2>ลบข้อมูลของคุณ</h2>
+            <p>หากคุณต้องการลบรายการพืชและประวัติคะแนนสัปดาห์ของคุณทั้งหมดพร้อมกับการเก็บบัญชีไว้ใช้ต่อ กรุณากรอกแบบฟอร์มด้านล่าง เราจะประมวลผลคำขอของคุณภายใน 30 วัน</p>
+
+            <div class="warning-box">
+                <p><strong>⚠️ หมายเหตุ: การดำเนินการนี้ไม่สามารถย้อนกลับได้</strong></p>
+                <p>การลบข้อมูลของคุณจะลบ:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>รายการพืชทั้งหมดของคุณ</li>
+                    <li>ประวัติคะแนนสัปดาห์ของคุณ</li>
+                </ul>
+                <p style="margin-top: 10px; color: #27ae60;"><strong>บัญชีของคุณจะยังคงใช้งานได้อยู่และคุณสามารถใช้ PlantScore ต่อไปได้</strong></p>
+            </div>
+
+            <div class="contact-box">
+                <p><strong>ทางเลือก: ติดต่อเราโดยตรง</strong></p>
+                <p>คุณสามารถส่งคำขอการลบโดยตรงไปที่:</p>
+                <p><strong>north.affhub@gmail.com</strong></p>
+                <p>กรุณาใส่ที่อยู่อีเมลของคุณในเรื่องหัวข้อ "[PlantScore] ขอลบข้อมูล"</p>
+            </div>
+
+            <form action="https://formsubmit.co/north.affhub@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="[PlantScore] ขอลบข้อมูล">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="request_type" value="Data Deletion">
+
+                <div class="form-group">
+                    <label for="email-th">ที่อยู่อีเมล *</label>
+                    <input type="email" id="email-th" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason-th">เหตุผลในการลบข้อมูล (ไม่บังคับ)</label>
+                    <textarea id="reason-th" name="reason" placeholder="บอกเราว่าทำไมคุณต้องการลบข้อมูล (ไม่บังคับ)"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirm-th" required>
+                    <label for="confirm-th" style="margin-bottom: 0;">ฉันเข้าใจว่ารายการพืชและประวัติคะแนนทั้งหมดของฉันจะถูกลบอย่างถาวร</label>
+                </div>
+
+                <button type="submit" class="submit-btn">ส่งคำขอลบข้อมูล</button>
+            </form>
+
+            <p class="date">มีผลบังคับใช้: 26 พฤษภาคม 2569</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('en-section').classList.remove('active');
+            document.getElementById('th-section').classList.remove('active');
+            document.querySelectorAll('button.lang-btn').forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'en') {
+                document.getElementById('en-section').classList.add('active');
+                document.querySelector('button.lang-btn[onclick*="en"]').classList.add('active');
+                document.getElementById('page-title').textContent = 'Data Deletion PlantScore';
+                document.documentElement.lang = 'en';
+            } else {
+                document.getElementById('th-section').classList.add('active');
+                document.querySelector('button.lang-btn[onclick*="th"]').classList.add('active');
+                document.getElementById('page-title').textContent = 'ลบข้อมูล PlantScore';
+                document.documentElement.lang = 'th';
+            }
+        }
+    </script>
+</body>
+</html>

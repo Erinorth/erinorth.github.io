@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นโยบายความเป็นส่วนตัว PlantScore | PlantScore Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .lang-toggle {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        button.active {
+            background: #2ecc71;
+            color: white;
+            border-color: #2ecc71;
+        }
+        button:hover {
+            border-color: #2ecc71;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        .contact-box {
+            background: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #2ecc71;
+            margin: 20px 0;
+        }
+        .contact-box p {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .date {
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 id="page-title">นโยบายความเป็นส่วนตัว PlantScore</h1>
+            </div>
+            <div class="lang-toggle">
+                <button id="th-btn" class="active" onclick="switchLang('th')">ไทย</button>
+                <button id="en-btn" onclick="switchLang('en')">English</button>
+            </div>
+        </div>
+
+        <!-- Thai Version -->
+        <div id="th-section" class="content active">
+            <p><strong>วันที่มีผลบังคับใช้:</strong> 26 พฤษภาคม 2569</p>
+
+            <p>PlantScore เป็นแอปพลิเคชันที่ช่วยให้ผู้ใช้ติดตามความหลากหลายของพืชในอาหารเพื่อสุขภาพลำไส้ เรามุ่งมั่นในการปกป้องความเป็นส่วนตัวของคุณ นโยบายนี้อธิบายว่าเราเก็บรวบรวม ใช้ และปกป้องข้อมูลของคุณอย่างไร</p>
+
+            <h2>ข้อมูลที่เราเก็บรวบรวม</h2>
+            <p>เราเก็บรวบรวม:</p>
+            <ul style="margin-left: 20px; margin-bottom: 12px;">
+                <li>อีเมลของคุณสำหรับการยืนยันตัวตน</li>
+                <li>รายการพืชที่คุณบันทึก (ชื่อพืช, หมวดหมู่, วันที่บันทึก)</li>
+                <li>ประวัติคะแนนสัปดาห์ของคุณ</li>
+                <li>ข้อมูลการสมัครสมาชิก Premium (หากมี)</li>
+                <li><strong>ภาพอาหาร:</strong> ภาพถูกประมวลผลในเครื่อง (on-device) เท่านั้นโดยใช้ Google ML Kit Image Labeling ภาพไม่เคยถูกอัปโหลดไปยังเซิร์ฟเวอร์</li>
+            </ul>
+
+            <h2>วิธีที่เราใช้ข้อมูลของคุณ</h2>
+            <p>ข้อมูลของคุณถูกใช้เพื่อ:</p>
+            <ul style="margin-left: 20px; margin-bottom: 12px;">
+                <li>ให้บริการแอปและติดตามความหลากหลายของพืชของคุณ</li>
+                <li>คำนวณคะแนนสัปดาห์และความก้าวหน้าของคุณ</li>
+                <li>จัดเก็บข้อมูลการสมัครสมาชิก Premium และคำขอบ่อยสำหรับการตรวจสอบ</li>
+                <li>ปรับปรุงแอปและฟีเจอร์ใหม่</li>
+                <li>ติดต่อคุณหากต้องการการสนับสนุน</li>
+            </ul>
+
+            <h2>การจัดเก็บและความปลอดภัยของข้อมูล</h2>
+            <p>ข้อมูลของคุณถูกจัดเก็บอย่างปลอดภัยบนเซิร์ฟเวอร์ Supabase ด้วยการเข้ารหัส (encryption) ทั้งขณะจัดเก็บ (at rest) และส่งข้อมูล (in transit) เราปฏิบัติตามมาตรฐานอุตสาหกรรมเพื่อปกป้องข้อมูลของคุณจากการเข้าถึงโดยไม่ได้รับอนุญาต</p>
+
+            <h2>บริการของบุคคลที่สาม</h2>
+            <p>เราใช้:</p>
+            <ul style="margin-left: 20px; margin-bottom: 12px;">
+                <li><strong>Google Sign-In:</strong> สำหรับการยืนยันตัวตน</li>
+                <li><strong>Google ML Kit:</strong> สำหรับการตรวจสอบพืชในเครื่องเท่านั้น (ไม่มีข้อมูลส่งอัปโหลด)</li>
+                <li><strong>Google Play / Apple App Store:</strong> สำหรับการจัดการการสมัครสมาชิก Premium</li>
+                <li><strong>Supabase:</strong> สำหรับบริการแบ็กเอนด์และการจัดเก็บข้อมูล</li>
+            </ul>
+            <p>บริการเหล่านี้มีนโยบายความเป็นส่วนตัวของตนเอง โปรดอ่านนโยบายของพวกเขาเพื่อเข้าใจวิธีการจัดการข้อมูลของพวกเขา</p>
+
+            <h2>การลบข้อมูล</h2>
+            <p>คุณสามารถลบบัญชี, รายการพืช, และประวัติคะแนนของคุณได้ตลอดเวลาจากหน้าบัญชี การลบจะดำเนินการทันทีและไม่สามารถย้อนกลับได้ สำหรับคำขอการลบข้อมูลโดยสมบูรณ์, โปรดติดต่อเรา</p>
+
+            <h2>การแก้ไขและการปรับปรุง</h2>
+            <p>เราอาจอัปเดตนโยบายความเป็นส่วนตัวนี้เป็นครั้งคราว หากมีการเปลี่ยนแปลงที่สำคัญ เราจะแจ้งให้คุณทราบโดยอัปเดตหน้านี้</p>
+
+            <div class="contact-box">
+                <p><strong>ติดต่อเรา</strong></p>
+                <p>หากคุณมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ หรือต้องการขอให้ลบข้อมูลของคุณ กรุณาติดต่อเรา:</p>
+                <p><strong>อีเมล:</strong> north.affhub@gmail.com</p>
+            </div>
+
+            <p class="date">อัปเดตครั้งล่าสุด: 26 พฤษภาคม 2569</p>
+        </div>
+
+        <!-- English Version -->
+        <div id="en-section" class="content">
+            <p><strong>Effective Date:</strong> May 26, 2026</p>
+
+            <p>PlantScore is an application that helps users track plant diversity in their diet for gut health. We are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information.</p>
+
+            <h2>Data We Collect</h2>
+            <p>We collect:</p>
+            <ul style="margin-left: 20px; margin-bottom: 12px;">
+                <li>Your email address for authentication</li>
+                <li>Plant log entries you create (plant name, category, logged date)</li>
+                <li>Your weekly score history</li>
+                <li>Premium subscription information (if applicable)</li>
+                <li><strong>Food photos:</strong> Photos are processed on-device only using Google ML Kit Image Labeling. Photos are never uploaded to our servers.</li>
+            </ul>
+
+            <h2>How We Use Your Data</h2>
+            <p>Your data is used to:</p>
+            <ul style="margin-left: 20px; margin-bottom: 12px;">
+                <li>Provide the app and track your plant diversity</li>
+                <li>Calculate your weekly scores and progress</li>
+                <li>Store Premium subscription data and process support requests</li>
+                <li>Improve the app and develop new features</li>
+                <li>Contact you regarding support if needed</li>
+            </ul>
+
+            <h2>Data Storage & Security</h2>
+            <p>Your data is securely stored on Supabase servers with encryption at rest and in transit. We follow industry best practices to protect your information from unauthorized access.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>We use:</p>
+            <ul style="margin-left: 20px; margin-bottom: 12px;">
+                <li><strong>Google Sign-In:</strong> For authentication</li>
+                <li><strong>Google ML Kit:</strong> For on-device plant detection only (no data uploads)</li>
+                <li><strong>Google Play / Apple App Store:</strong> For Premium subscription management</li>
+                <li><strong>Supabase:</strong> For backend services and data storage</li>
+            </ul>
+            <p>These services have their own privacy policies. Please review their policies to understand how they handle your data.</p>
+
+            <h2>Data Deletion</h2>
+            <p>You can delete your account, plant logs, and score history anytime from the Account page. Deletion is immediate and irreversible. For requests to completely delete all your data, please contact us.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. If we make material changes, we will notify you by updating this page.</p>
+
+            <div class="contact-box">
+                <p><strong>Contact Us</strong></p>
+                <p>If you have questions about this privacy policy or wish to request deletion of your data, please contact us:</p>
+                <p><strong>Email:</strong> north.affhub@gmail.com</p>
+            </div>
+
+            <p class="date">Last Updated: May 26, 2026</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Hide all sections
+            document.getElementById('th-section').classList.remove('active');
+            document.getElementById('en-section').classList.remove('active');
+            document.getElementById('th-btn').classList.remove('active');
+            document.getElementById('en-btn').classList.remove('active');
+
+            // Show selected language
+            if (lang === 'th') {
+                document.getElementById('th-section').classList.add('active');
+                document.getElementById('th-btn').classList.add('active');
+                document.getElementById('page-title').textContent = 'นโยบายความเป็นส่วนตัว PlantScore';
+                document.documentElement.lang = 'th';
+            } else {
+                document.getElementById('en-section').classList.add('active');
+                document.getElementById('en-btn').classList.add('active');
+                document.getElementById('page-title').textContent = 'PlantScore Privacy Policy';
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>
