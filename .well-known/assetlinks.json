@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lifesyncth.flutter_app_template",
+      "sha256_cert_fingerprints": [
+        "AC:0E:F7:CA:B8:47:60:77:0A:F6:39:75:74:97:E0:6C:53:FF:13:63:7A:B6:D4:3D:F2:27:7F:C5:D9:47:0C:57"
+      ]
+    }
+  }
+]
