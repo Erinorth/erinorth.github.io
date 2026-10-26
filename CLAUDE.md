@@ -27,6 +27,7 @@ Known apps at the time of writing (not exhaustive):
 | WishPause | `wishpause_` |
 | PetSym | `petsym_` |
 | JointCast | `jointcast_` |
+| GrowthDesk (YouTube marketing tool, not a mobile app; home + privacy + terms only) | `growthdesk` (`growthdesk.html`, `growthdesk_privacy.html`, `growthdesk_terms.html`) |
 
 When adding a new app, **update this table** with the new app name and file prefix.
 
